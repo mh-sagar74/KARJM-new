@@ -1,103 +1,43 @@
+import { Center } from "@/components/ui/center";
+import { Grid, GridItem } from "@/components/ui/grid";
+import { Text } from "@/components/ui/text";
 import Image from "next/image";
+import React from "react";
+import PrayerTimes from "./components/PrayerTimes";
+import AboutMosque from "./components/AboutMosque";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <Grid className="gap-4 grid-cols-10" >
+      <GridItem className="col-span-10">
+        <Center className="pt-[20px] sm:pt-[30px] md:pt-[50px] pb-[15px] sm:pb-[25px] md:pb-[40px]">
+          <Text className="text-center text-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">Welcome to Khanjahan Ali (R:) Jame Masjid</Text>
+        </Center>
+      </GridItem>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      <GridItem className="col-span-10 flex justify-center">
+        <Center className="w-[100%] sm:w-[70%] md:w-[60%] lg:w-[50%]">
+          <Text className="text-center text-black text-lg sm:text-xl">A place of worship, community, and spiritual growth. Join us in prayer, learning, and service to strengthen our faith and community bonds.</Text>
+        </Center>
+      </GridItem>
+
+      <GridItem className="col-span-10 flex justify-center">
+        <Center className="relative w-[100%] md:w-[80%] h-[400px] md:h-[500px] lg:h-[700px] my-[30px] md:my-[50px]">
+          <Image src={"/mosque.png"} alt="KARJM" fill className="object-cover rounded-xl md:rounded-2xl shadow-md" />
+        </Center>
+      </GridItem>
+
+      <GridItem className="col-span-10 flex justify-center">
+        <Center className="my-[30px] md:my-[50px]">
+          <PrayerTimes />
+        </Center>
+      </GridItem>
+
+      <GridItem className="col-span-10 flex justify-center">
+        <Center className="my-[30px] md:my-[50px]">
+          <AboutMosque />
+        </Center>
+      </GridItem>
+    </Grid >
+  )
 }
