@@ -8,6 +8,7 @@ import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import StyledJsxRegistry from "./registry";
 import Navbar from "./components/Navbar";
 import ReactLenis from "@studio-freight/react-lenis";
+import CustomCursor from "@/components/customCursor/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,11 +19,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-//export const metadata = {
-//title: "KARJM",
-//description: "Khanjahan Ali Rahmatullah Jame Masjid",
-//};
 
 export default function RootLayout({ children }) {
   return (
@@ -38,6 +34,7 @@ export default function RootLayout({ children }) {
               </main>
             </GluestackUIProvider>
           </StyledJsxRegistry>
+          <CustomCursor />
         </body>
       </html>
     </ReactLenis>
