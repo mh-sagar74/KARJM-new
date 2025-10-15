@@ -40,7 +40,7 @@ const CustomCursor = () => {
   return (
     <div
       id="custom-cursor-follower"
-      className="fixed top-0 left-0 w-[15px] h-[15px] bg-[#006830] rounded-full pointer-events-none z-[9999] opacity-50 transition-opacity duration-300"
+      className="fixed top-0 left-0 w-[0px] h-[0px] lg:w-[15px] lg:h-[15px] bg-[#006830] rounded-full pointer-events-none z-[9999] opacity-50 transition-opacity duration-300"
     />
   );
 };
