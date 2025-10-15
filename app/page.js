@@ -23,20 +23,16 @@ export default function Home() {
 
       <GridItem className="col-span-10 flex justify-center">
         <Center className="relative w-[100%] md:w-[80%] h-[400px] md:h-[500px] lg:h-[700px] my-[30px] md:my-[50px]">
-          <Image src={"/mosque.png"} alt="KARJM" fill className="object-cover rounded-xl md:rounded-2xl shadow-md" />
+          <Image src={"/mosque.png"} alt="KARJM" fill className="object-cover rounded-xl md:rounded-2xl shadow-2xl" />
         </Center>
       </GridItem>
 
-      <GridItem className="col-span-10 flex justify-center">
-        <Center className="my-[30px] md:my-[50px]">
-          <PrayerTimes />
-        </Center>
+      <GridItem className="col-span-10 flex justify-center my-[30px] md:my-[50px]">
+        <PrayerTimes />
       </GridItem>
 
-      <GridItem className="col-span-10 flex justify-center">
-        <Center className="my-[30px] md:my-[50px]">
-          <AboutMosque />
-        </Center>
+      <GridItem className="col-span-10 flex justify-center my-[30px] md:my-[50px]">
+        <AboutMosque />
       </GridItem>
     </Grid >
   )

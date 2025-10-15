@@ -46,7 +46,7 @@ function Navbar() {
         >
           <ButtonIcon as={MenuIcon} size={20} />
         </Button>
-        <Drawer className="fixed"
+        <Drawer className="fixed h-[100vh]"
           isOpen={showDrawer}
           size="md"
           anchor="right"

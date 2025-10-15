@@ -1,24 +1,29 @@
 import { Box } from "@/components/ui/box";
+import { Center } from "@/components/ui/center";
 import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
+import Image from "next/image";
 
 export default function AboutMosque() {
   return (
     <VStack>
-      <Text className="text-black font-semibold text-2xl md:text-3xl mb-4">About Mosque</Text>
-      <Box className="grid grid-cols-1 md:grid-cols-2">
+      <Box className="grid grid-cols-1 md:grid-cols-2 gap-4 content-center">
+        <VStack className="justify-center p-2 sm:p-3 md:p-6">
+          <Text className="text-black font-semibold text-2xl md:text-3xl mb-4">About Mosque</Text>
+          <Text className="text-lg">
+            The Khanjahan Ali Rahmatullah Jame Masjid is a Sunni mosque located in Khulna, Khulna.
+            Established in 1980, it has been serving the local community for several decades.
+            This mosque is known for its beautiful architecture and tranquil atmosphere,
+            making it a peaceful place for worship.
 
-        <Text>
-          The Khanjahan Ali Rahmatullah Jame Masjid is a Sunni mosque located in Khulna, Khulna. Established in 1980, it has been serving the local community for several decades. This mosque is known for its beautiful architecture and tranquil atmosphere, making it a peaceful place for worship.
+            The mosque provides prayer facilities only for men, ensuring that everyone feels welcome and comfortable. Additionally,
+            the mosque is kid-friendly.
+          </Text>
+        </VStack>
 
-          The mosque provides prayer facilities only for men, ensuring that everyone feels welcome and comfortable. Additionally, the mosque is kid-friendly.
-
-          For those with mobility needs, the Khanjahan Ali Rahmatullah Jame Masjid offers wheelchair amenities. There is a designated prayer space available to accommodate individuals using wheelchairs, ensuring that they can participate in the prayers without any difficulty. While specific details about parking, toilets, and Odhu facilities for wheelchair users are not provided, it can be assumed that efforts are made to cater to the needs of individuals with disabilities.
-
-          With its friendly and helpful imam, this mosque not only serves as a place of worship but also as a community center. The imam is known for his approachability and eagerness to assist those who visit the mosque. Whether you are seeking a place for prayer or simply want to experience the peaceful ambiance, the Khanjahan Ali Rahmatullah Jame Masjid is a welcoming mosque in Khulna, Khulna.
-        </Text>
-
-        <Text>Image</Text>
+        <Center className="relative w-[100%] h-[400px] md:h[500px]">
+          <Image alt="KARJM" src={"/insideMosque.png"} fill className="object-cover rounded-xl md:rounded-2xl shadow-md" />
+        </Center>
       </Box>
     </VStack>
   )

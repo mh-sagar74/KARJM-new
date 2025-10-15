@@ -23,13 +23,14 @@ export default function PrayerTimes() {
       </Center>
 
       <Box className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-        {prayers.map((prayer, index) => <Center key={index} className="px-[40px] py-[10px] sm:px-[60px] sm:py-[10px] border border-black rounded-lg gap-2">
-          <Center className="gap-2">
-            <Text className="text-black text-lg text-center">{prayer.name}</Text>
-            <Text className="text-black text-lg font-bold text-center">{prayer.iqamah}</Text>
-            <Text className="text-xs text-center">Waqt: {prayer.waqt}</Text>
-          </Center>
-        </Center>)}
+        {prayers.map((prayer, index) =>
+          <Center key={index} className="px-[40px] py-[10px] sm:px-[60px] sm:py-[10px] border border-black rounded-lg gap-2 hover:shadow-md transition duration-300 ease-in-out">
+            <Center className="gap-2">
+              <Text className="text-black text-lg text-center">{prayer.name}</Text>
+              <Text className="text-black text-lg font-bold text-center">{prayer.iqamah}</Text>
+              <Text className="text-xs text-center">Waqt: {prayer.waqt}</Text>
+            </Center>
+          </Center>)}
       </Box>
 
       <Center>
