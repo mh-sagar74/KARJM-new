@@ -25,17 +25,17 @@ function Navbar() {
     <HStack className="gap-2 justify-between fixed top-0 right-0 left-0 w-full z-50 shadow-sm px-[20px] md:px-[60px] h-[60px] md:h-[80px] lg:h-[90px] bg-white" reversed={false} >
       <HStack className="items-center">
         <Link href={"/"}>
-          <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] lg:h-[70px] lg:w-[70px]" source={{ uri: "/logo.png" }} />
+          <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px]" source={{ uri: "/logo.png" }} />
         </Link>
         <Link href={"/"}>
-          <Text className="text-[#006830] font-bold text-sm sm:text-lg md:text-xl lg:text-2xl">Khanjahan Ali (R:) Jame Masjid</Text>
+          <Text className="text-[#006830] font-bold text-sm sm:text-lg md:text-xl">Khanjahan Ali (R:) Jame Masjid</Text>
         </Link>
       </HStack>
 
       <HStack className="items-center hidden sm:flex sm:gap-2">
         <NavLink href={"/"} label={"Home"} />
-        <NavLink href={"/about-us"} label={"About us"} />
-        <NavLink href={"/contact-us"} label={"Contact us"} />
+        <NavLink href={"/about-us"} label={"About"} />
+        <NavLink href={"/contact-us"} label={"Contact"} />
       </HStack>
 
       <HStack className="items-center flex sm:hidden">
@@ -65,8 +65,8 @@ function Navbar() {
             <DrawerBody>
               <VStack space={"xl"} className="pt-4">
                 <NavLink href={"/"} label={"Home"} />
-                <NavLink href={"/about-us"} label={"About us"} />
-                <NavLink href={"/contact-us"} label={"Contact us"} />
+                <NavLink href={"/about-us"} label={"About"} />
+                <NavLink href={"/contact-us"} label={"Contact"} />
               </VStack>
 
             </DrawerBody>
