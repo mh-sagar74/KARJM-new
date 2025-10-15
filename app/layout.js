@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }) {
   return (
-    <ReactLenis root options={{ duration: 1, easing: (t) => t * (2 - t) }}>
+    <ReactLenis root options={{ duration: 1.2, easing: (t) => t * (2 - t) }}>
       <html lang="en">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
