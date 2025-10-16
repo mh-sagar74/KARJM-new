@@ -1,0 +1,23 @@
+"use client";
+
+import ReactLenis from "@studio-freight/react-lenis";
+import CustomCursor from "@/components/customCursor/CustomCursor";
+import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
+import StyledJsxRegistry from "../registry";
+import Navbar from "./Navbar";
+
+export default function ClientLayout({ children }) {
+  return (
+    <ReactLenis root options={{ duration: 0.8, easing: (t) => t * (2 - t) }}>
+      <StyledJsxRegistry>
+        <GluestackUIProvider>
+          <Navbar />
+          <main className="pt-[70px] md:pt-[90px] lg:pt-[100px] px-[20px] md:px-[60px]">
+            {children}
+          </main>
+        </GluestackUIProvider>
+      </StyledJsxRegistry>
+      <CustomCursor />
+    </ReactLenis>
+  );
+}
