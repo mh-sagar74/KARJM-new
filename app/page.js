@@ -6,6 +6,7 @@ import React from "react";
 import PrayerTimes from "./components/PrayerTimes";
 import AboutMosque from "./components/AboutMosque";
 import ServiceProgram from "./components/ServiceProgram";
+import VisitUs from "./components/VisitUs";
 
 export default function Home() {
   return (
@@ -38,6 +39,10 @@ export default function Home() {
 
       <GridItem className="col-span-10 flex justify-center my-[40px] md:my-[70px]">
         <ServiceProgram />
+      </GridItem>
+
+      <GridItem className="col-span-10 flex justify-center my-[40px] md:my-[70px]">
+        <VisitUs />
       </GridItem>
     </Grid >
   )
