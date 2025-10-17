@@ -11,7 +11,7 @@ export default function VisitUs() {
   const contactInfos = [{ icon: MapPin, title: "Address", content: "190 Haji Ismail Rd<br/>Khulna, 9100<br />Bangladesh" },
   { icon: Phone, title: "Phone", content: "+880 1300842702" },
   { icon: Mail, title: "Email", content: "mhsagarcse02@gmail.com" },
-  { icon: Clock, title: "Open Hours", content: "Open daily, 5 minutes before each waqt adhan." }]
+  { icon: Clock, title: "Open Hours", content: "Opens every day, 5 minutes before each prayer time (waqt adhan)." }]
 
   return (
     <VStack className="gap-5">
