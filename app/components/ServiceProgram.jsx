@@ -7,28 +7,32 @@ import { GraduationCap, UsersRound, HandHeart, Gem } from "lucide-react";
 
 export default function ServiceProgram() {
 
-  const services = [{ icon: <GraduationCap />, title: "Something", description: "Something plus" },
-  { icon: <UsersRound />, title: "Something p", description: "Something plus" },
-  { icon: <HandHeart />, title: "Something pr", description: "Something pro" },
-  { icon: <Gem />, title: "Something mx", description: "Something pro max" }]
+  const services = [{ icon: GraduationCap, title: "Islamic Education", description: "Quran classes, Arabic lessons, and Islamic studies for all ages." },
+  { icon: UsersRound, title: "Youth Programs", description: "Engaging activities and mentorship for young Muslims." },
+  { icon: HandHeart, title: "Community Outreach", description: "Charity initiatives and support for those in need." },
+  { icon: Gem, title: "Nikah (Marriage) Service", description: "Islamic marriage (Nikah) service, including registration, officiation by the imam, and guidance for couples to begin their union with blessings and faith." }]
 
   return (
     <VStack className="gap-5">
       <Center className="mb-2">
-        <Text className="text-black font-semibold text-2xl md:text-3xl">Our Services & Programs</Text>
+        <Text className="text-black font-semibold text-2xl md:text-3xl text-center">Our Services & Programs</Text>
       </Center>
 
-      <Box className="grid gird-cols-1 md:grid-cols-2 gap-4">
+      <Center className="mb-2">
+        <Text className="text-lg text-center w-[100%] sm:w-[70%] md:w-[60%] lg:w-[50%]">We offer a variety of programs and services to support the spiritual, educational, and social needs of our community.</Text>
+      </Center>
+
+      <Box className="grid gird-cols-1 md:grid-cols-2 gap-6">
         {services.map((service, index) =>
-          <Center key={index} className="border w-[100%]">
-            <HStack>
-              <Center>{service.icon}</Center>
-              <VStack>
-                <Text>{service.title}</Text>
-                <Text>{service.description}</Text>
-              </VStack>
-            </HStack>
-          </Center>)}
+          <HStack key={index} className="border rounded-xl border-black p-4 sm:p-6 items-center hover:shadow-md transition duration-300 ease-in-out">
+            <Center className="h-10 w-10 sm:h-12 sm:w-12 flex-shrink-0">
+              <service.icon className="h-6 w-6" />
+            </Center>
+            <VStack className="justify-center pl-3 sm:pl-4 gap-2">
+              <Text className="text-black text-lg font-bold">{service.title}</Text>
+              <Text className="text-lg">{service.description}</Text>
+            </VStack>
+          </HStack>)}
       </Box>
     </VStack>
   )
