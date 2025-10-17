@@ -33,7 +33,7 @@ export default function VisitUs() {
                 </Center>
                 <VStack className="justify-center pl-3 sm:pl-4 gap-2">
                   <Text className="text-black text-lg font-semibold">{contact.title}</Text>
-                  <Text dangerouslySetInnerHTML={{ __html: contact.content }} className="text-lg" />
+                  <Text dangerouslySetInnerHTML={{ __html: contact.content }} className="text-lg break-all" />
                 </VStack>
               </HStack>
             </VStack>)}
