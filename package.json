@@ -19,6 +19,7 @@
     "@studio-freight/react-lenis": "^0.0.47",
     "dom-helpers": "^5.2.1",
     "lucide-react": "^0.545.0",
+    "luxon": "^3.7.2",
     "nativewind": "^4.1.23",
     "next": "15.5.4",
     "react": "19.1.0",

@@ -8,6 +8,7 @@ import { Text } from "@/components/ui/text";
 import { VStack } from "@/components/ui/vstack";
 import PrayerTimeCalculator from "@masaajid/prayer-times";
 import { Clock } from "lucide-react";
+import { DateTime } from "luxon";
 
 export default function PrayerTimes() {
 
@@ -19,11 +20,11 @@ export default function PrayerTimes() {
 
   const prayersRaw = calculator.calculate();
 
-  const prayers = [{ name: "Fajr", waqt: prayersRaw.fajr, iqamah: "06:45am", isActive: false },
+  const prayers = [{ name: "Fajr", waqt: prayersRaw.fajr, iqamah: "05:00am", isActive: false },
   { name: "Dhuhr", waqt: prayersRaw.dhuhr, iqamah: "01:30pm", isActive: false },
-  { name: "Asr", waqt: prayersRaw.asr, iqamah: "04:45pm", isActive: true },
-  { name: "Maghrib", waqt: prayersRaw.maghrib, iqamah: "06:45pm", isActive: false },
-  { name: "Isha", waqt: prayersRaw.isha, iqamah: "08:45pm", isActive: false }];
+  { name: "Asr", waqt: prayersRaw.asr, iqamah: "04:15pm", isActive: true },
+  { name: "Maghrib", waqt: prayersRaw.maghrib, iqamah: "05:40pm", isActive: false },
+  { name: "Isha", waqt: prayersRaw.isha, iqamah: "08:00pm", isActive: false }];
 
   return (
     <VStack className="gap-5">
@@ -43,12 +44,7 @@ export default function PrayerTimes() {
             <Center className="gap-2 mx-[30px] sm:mx-[40px] my-[10px]">
               <Text className="text-black text-lg text-center">{prayer.name}</Text>
               <Text className="text-black text-xl font-semibold text-center">{prayer.iqamah}</Text>
-              <Text className="text-center font-semibold">Waqt: {new Date(prayer.waqt).toLocaleTimeString("en-BD", {
-                hour: "2-digit",
-                minute: "2-digit",
-                hour12: true,
-                timezone: "Asia/Dhaka",
-              })}</Text>
+              <Text className="text-center font-semibold">Waqt: {DateTime.fromJSDate(new Date(prayer.waqt)).setZone("Asia/Dhaka").toFormat("hh:mma")}</Text>
             </Center>
           </Center>)}
       </Box>
