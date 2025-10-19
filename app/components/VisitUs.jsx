@@ -16,7 +16,7 @@ export default function VisitUs() {
   return (
     <VStack className="gap-5">
       <Center className="mb-2">
-        <Text className="text-black font-semibold text-2xl md:text-3xl text-center">Visit Us</Text>
+        <Text className="text-black font-bold text-2xl md:text-3xl text-center">Visit Us</Text>
       </Center>
 
       <Center className="mb-2">

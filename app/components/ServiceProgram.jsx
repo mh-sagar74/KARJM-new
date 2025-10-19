@@ -15,7 +15,7 @@ export default function ServiceProgram() {
   return (
     <VStack className="gap-5">
       <Center className="mb-2">
-        <Text className="text-black font-semibold text-2xl md:text-3xl text-center">Our Services & Programs</Text>
+        <Text className="text-black font-bold text-2xl md:text-3xl text-center">Our Services & Programs</Text>
       </Center>
 
       <Center className="mb-2">

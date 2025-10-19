@@ -21,6 +21,12 @@ import { VStack } from "@/components/ui/vstack";
 import Link from "next/link";
 function Navbar() {
   const [showDrawer, setShowDrawer] = useState(false);
+
+  const navLinks = [{ href: "/", label: "Home" }, { href: "/prayer-times", label: "Prayer Times" },
+  { href: "/services", label: "Services" },
+  { href: "/about-us", label: "About" },
+  { href: "/contact-us", label: "Contact" },];
+
   return (
     <HStack className="gap-2 justify-between fixed top-0 right-0 left-0 w-full z-50 shadow-sm px-[20px] md:px-[60px] h-[60px] md:h-[80px] lg:h-[90px] bg-white" reversed={false} >
       <HStack className="items-center">
@@ -32,13 +38,11 @@ function Navbar() {
         </Link>
       </HStack>
 
-      <HStack className="items-center hidden sm:flex sm:gap-2">
-        <NavLink href={"/"} label={"Home"} />
-        <NavLink href={"/about-us"} label={"About"} />
-        <NavLink href={"/contact-us"} label={"Contact"} />
+      <HStack className="items-center hidden lg:flex lg:gap-2">
+        {navLinks.map((nav, index) => <NavLink key={index} href={nav.href} label={nav.label} />)}
       </HStack>
 
-      <HStack className="items-center flex sm:hidden">
+      <HStack className="items-center flex lg:hidden">
         <Button action={"secondary"} size={"xs"}
           onPress={() => {
             setShowDrawer(true);
@@ -64,9 +68,7 @@ function Navbar() {
             </DrawerHeader>
             <DrawerBody>
               <VStack space={"xl"} className="pt-4">
-                <NavLink href={"/"} label={"Home"} />
-                <NavLink href={"/about-us"} label={"About"} />
-                <NavLink href={"/contact-us"} label={"Contact"} />
+                {navLinks.map((nav, index) => <NavLink key={index} href={nav.href} label={nav.label} />)}
               </VStack>
 
             </DrawerBody>

@@ -23,7 +23,7 @@ export default function Home() {
         </Center>
       </GridItem>
 
-      <GridItem className="col-span-10 flex justify-center">
+      <GridItem className="col-span-10 flex justify-center mt-[40px] md:mt-[70px]">
         <Center className="relative w-[100%] md:w-[80%] h-[400px] md:h-[500px] lg:h-[700px] mt-[30px] md:mt-[50px] mb-[40px] md:mb-[70px]">
           <Image src={"/mosque.png"} alt="KARJM" fill className="object-cover rounded-xl md:rounded-2xl shadow-2xl" />
         </Center>

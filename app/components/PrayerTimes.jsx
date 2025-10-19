@@ -14,8 +14,8 @@ export default function PrayerTimes() {
   return (
     <VStack className="gap-5">
       <HStack className="items-center justify-center gap-3 mb-2">
-        <Text className="text-black font-semibold text-2xl md:text-3xl">Prayer Times</Text>
-        <Clock />
+        <Text className="text-black font-bold text-2xl md:text-3xl">Prayer Times</Text>
+        <Clock strokeWidth={3} />
       </HStack>
 
       <Center className="mb-2">
