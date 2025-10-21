@@ -55,13 +55,13 @@ export default function PrayerTimes() {
       prayerCalculator();
     }, 86400000);
 
-    const updateActivePrayer = setInterval(() => {
+    const updateActiveInterval = setInterval(() => {
       setPrayers((prev) => updateActivePrayer(prev));
     }, 60000);
 
     return () => {
       clearInterval(dailyInterval);
-      clearInterval(updateActivePrayer);
+      clearInterval(updateActiveInterval);
     }
   }, [])
 
