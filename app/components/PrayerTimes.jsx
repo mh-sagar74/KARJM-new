@@ -1,4 +1,4 @@
-export const revalidate = 86400;
+"use client";
 
 import LiveDateTime from "@/components/liveclock/LiveDateTime";
 import { Box } from "@/components/ui/box";
@@ -9,22 +9,56 @@ import { VStack } from "@/components/ui/vstack";
 import PrayerTimeCalculator from "@masaajid/prayer-times";
 import { Clock } from "lucide-react";
 import { DateTime } from "luxon";
+import { useEffect, useState } from "react";
 
 export default function PrayerTimes() {
+  const [prayers, setPrayers] = useState([]);
 
-  const calculator = new PrayerTimeCalculator({
-    method: "Karachi",
-    location: [22.8079661, 89.548438],
-    timezone: "Asia/Dhaka",
-  });
+  const prayerCalculator = () => {
+    const calculator = new PrayerTimeCalculator({
+      method: "Karachi",
+      location: [22.8079661, 89.548438],
+      timezone: "Asia/Dhaka",
+    });
 
-  const prayersRaw = calculator.calculate();
+    const prayersRaw = calculator.calculate();
 
-  const prayers = [{ name: "Fajr", waqt: prayersRaw.fajr, iqamah: "05:00am", isActive: false },
-  { name: "Dhuhr", waqt: prayersRaw.dhuhr, iqamah: "01:30pm", isActive: false },
-  { name: "Asr", waqt: prayersRaw.asr, iqamah: "04:15pm", isActive: true },
-  { name: "Maghrib", waqt: prayersRaw.maghrib, iqamah: "05:40pm", isActive: false },
-  { name: "Isha", waqt: prayersRaw.isha, iqamah: "08:00pm", isActive: false }];
+    const todayPrayers = [{ name: "Fajr", waqt: prayersRaw.fajr, iqamah: "05:00am", isActive: false },
+    { name: "Dhuhr", waqt: prayersRaw.dhuhr, iqamah: "01:30pm", isActive: false },
+    { name: "Asr", waqt: prayersRaw.asr, iqamah: "04:15pm", isActive: false },
+    { name: "Maghrib", waqt: prayersRaw.maghrib, iqamah: "05:40pm", isActive: false },
+    { name: "Isha", waqt: prayersRaw.isha, iqamah: "08:00pm", isActive: false }];
+
+    setPrayers(updateActivePrayer(todayPrayers));
+  }
+
+  let activeIndex = -1;
+  const updateActivePrayer = (prayersList) => {
+    const now = DateTime.local().setZone("Asia/Dhaka");
+
+    for (let i = 0; i < prayersList.length; i++) {
+      const prayerTime = DateTime.fromJSDate(new Date(prayersList[i].waqt)).setZone("Asia/Dhaka");
+      if (now >= prayerTime) {
+        activeIndex = i
+      }
+    }
+
+    return prayersList.map((prayer, index) => ({
+      ...prayer, isActive: index === activeIndex
+    }))
+  }
+
+  useEffect(() => {
+    prayerCalculator();
+
+    const dailyInterval = setInterval(() => {
+      prayerCalculator();
+    }, 86400000);
+
+    const updateActivePrayer = setInterval(() => {
+      setPrayers((prev) => updateActivePrayer(prev));
+    }, 60000);
+  }, [])
 
   return (
     <VStack className="gap-5">
@@ -44,7 +78,9 @@ export default function PrayerTimes() {
             <Center className="gap-2 mx-[30px] sm:mx-[40px] my-[10px]">
               <Text className="text-black text-lg text-center">{prayer.name}</Text>
               <Text className="text-black text-xl font-semibold text-center">{prayer.iqamah}</Text>
-              <Text className="text-center font-semibold">Waqt: {DateTime.fromJSDate(new Date(prayer.waqt)).setZone("Asia/Dhaka").toFormat("hh:mma")}</Text>
+              <Text className="text-center font-semibold">Waqt:{" "}
+                {DateTime.fromJSDate(new Date(prayer.waqt)).setZone("Asia/Dhaka").toFormat("hh:mma")}
+              </Text>
             </Center>
           </Center>)}
       </Box>
