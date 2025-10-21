@@ -58,6 +58,11 @@ export default function PrayerTimes() {
     const updateActivePrayer = setInterval(() => {
       setPrayers((prev) => updateActivePrayer(prev));
     }, 60000);
+
+    return () => {
+      clearInterval(dailyInterval);
+      clearInterval(updateActivePrayer);
+    }
   }, [])
 
   return (
