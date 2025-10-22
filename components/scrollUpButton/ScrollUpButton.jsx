@@ -26,7 +26,7 @@ export default function ScrollUpButton() {
         animate={{ y: [0, -10, 0] }}
         transition={{
           duration: 0.6, repeat: Infinity,
-          repeatDelay: 3, ease: "easeInOut"
+          repeatDelay: 2, ease: "easeInOut"
         }}
       >
         <ArrowBigUpDash />
