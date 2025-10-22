@@ -18,9 +18,9 @@ body {
 
 @keyframes heartbeat {
   0%, 100%{
-    box-shadow:0 0 0px #006830;
+    transform:scale(1);
   }
   50% {
-    box-shadow: 0 0 20px #006830;
+    transform: scale(1.05);
   }
 }
