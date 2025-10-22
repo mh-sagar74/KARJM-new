@@ -25,7 +25,7 @@ export default function Footer() {
 
   return (
     <VStack className="mx-[20px] md:mx-[60px]">
-      <Box className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4  mt-[70px] md:mt-[100px] mb-[20px] md:mb-[30px] gap-8">
+      <Box className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4  mt-[70px] md:mt-[100px] mb-[10px] md:mb-[15px] gap-8">
         <VStack>
           <Link href={"/"}>
             <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] mb-2" source={{ uri: "/logo.png" }} />
