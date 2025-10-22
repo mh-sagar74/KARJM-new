@@ -25,7 +25,7 @@ export default function Footer() {
 
   return (
     <VStack className="mx-[20px] md:mx-[60px]">
-      <Box className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4  mt-[70px] md:mt-[100px] mb-[30px] md:mb-[40px] gap-8">
+      <Box className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4  mt-[70px] md:mt-[100px] mb-[20px] md:mb-[30px] gap-8">
         <VStack>
           <Link href={"/"}>
             <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] mb-2" source={{ uri: "/logo.png" }} />
@@ -60,7 +60,7 @@ export default function Footer() {
       <Divider className="bg-black" />
 
       <Center>
-        <Text className="text-sm text-black my-[30px] md:my-[40px] text-center">&copy; 2025-{new Date().getFullYear()} KARJM. All rights reserved.</Text>
+        <Text className="text-sm text-black my-[10px] md:my-[15px] text-center">&copy; 2025-{new Date().getFullYear()} KARJM. All rights reserved.</Text>
       </Center>
     </VStack>)
 }
