@@ -78,9 +78,9 @@ export default function PrayerTimes() {
 
       <Box className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
         {prayers.map((prayer, index) =>
-          <Center key={index} className={prayer.isActive ? "bg-[#006830] bg-opacity-20 border border-black rounded-lg gap-2 hover:shadow-md hover:shadow-[#006830]/70 transition duration-300 ease-in-out"
+          <Center key={index} className={prayer.isActive ? "bg-[#006830] bg-opacity-20 border border-black rounded-lg gap-2 animate-[heartbeat_1.8s_ease-in-out_infinite]"
             : "border border-black rounded-lg gap-2 hover:shadow-md hover:shadow-[#006830]/70 transition duration-300 ease-in-out"}>
-            <Center className="gap-2 mx-[30px] sm:mx-[40px] my-[10px]">
+            <Center className="gap-2 mx-[30px] sm:mx-[40px] my-[15px]">
               <Text className="text-black text-lg text-center">{prayer.name}</Text>
               <Text className="text-black text-xl font-semibold text-center">{prayer.iqamah}</Text>
               <Text className="text-center font-semibold">Waqt:{" "}

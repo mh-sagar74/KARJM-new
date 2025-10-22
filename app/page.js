@@ -34,7 +34,7 @@ export default function Home() {
         </Center>
       </GridItem>
 
-      <GridItem className="col-span-10 flex justify-center my-[40px] md:my-[70px]">
+      <GridItem className="col-span-10 my-[40px] md:my-[70px]">
         <CustomScrollDown>
           <PrayerTimes />
         </CustomScrollDown>
