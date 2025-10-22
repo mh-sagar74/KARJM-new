@@ -6,6 +6,7 @@ import { GluestackUIProvider } from "@/components/ui/gluestack-ui-provider";
 import StyledJsxRegistry from "../registry";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import ScrollUpButton from "@/components/scrollUpButton/ScrollUpButton";
 
 export default function ClientLayout({ children }) {
   return (
@@ -16,6 +17,7 @@ export default function ClientLayout({ children }) {
           <main className="pt-[70px] md:pt-[90px] lg:pt-[100px] px-[20px] md:px-[60px]">
             {children}
           </main>
+          <ScrollUpButton />
           <Footer />
         </GluestackUIProvider>
       </StyledJsxRegistry>

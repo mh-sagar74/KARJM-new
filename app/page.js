@@ -7,7 +7,7 @@ import PrayerTimes from "./components/PrayerTimes";
 import AboutMosque from "./components/AboutMosque";
 import ServiceProgram from "./components/ServiceProgram";
 import VisitUs from "./components/VisitUs";
-import CustomScrollDown from "@/components/customScrollDown/CustomScrollDown";
+import { CustomScrollDown } from "@/components/customScrollDown/CustomScrollDown";
 
 export default function Home() {
   return (

@@ -2,8 +2,10 @@
 
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useEffect, useState } from "react";
+import { useLenis } from '@studio-freight/react-lenis';
 
-export default function CustomScrollDown({ children, delay = 0 }) {
+export function CustomScrollDown({ children, delay = 0 }) {
   const [ref, inView] = useInView({ triggerOnce: false, threshold: 0.2 });
 
   return (
@@ -16,4 +18,20 @@ export default function CustomScrollDown({ children, delay = 0 }) {
       {children}
     </motion.div>
   )
+}
+
+export function UseScrollVisibility() {
+  const [visible, setVisible] = useState(false);
+  const lenis = useLenis();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = lenis?.scroll || window.scrollY;
+      setVisible(scrollY > 300);
+    }
+    lenis?.on("scroll", handleScroll);
+    handleScroll();
+    return () => lenis?.off("scroll", handleScroll);
+  }, [lenis]);
+  return visible;
 }
