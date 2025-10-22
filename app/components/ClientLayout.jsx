@@ -10,7 +10,7 @@ import ScrollUpButton from "@/components/scrollUpButton/ScrollUpButton";
 
 export default function ClientLayout({ children }) {
   return (
-    <ReactLenis root options={{ duration: 0.8, easing: (t) => t * (2 - t) }}>
+    <ReactLenis root options={{ duration: 0.3, easing: (t) => t }}>
       <StyledJsxRegistry>
         <GluestackUIProvider>
           <Navbar />
