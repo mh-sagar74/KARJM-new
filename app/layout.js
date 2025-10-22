@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "KARJM | Khanjahan Ali Rahmatullah Jame Masjid",
   description: "Official website for the Khanjahan Ali Rahmatullah Jame Masjid. Find service times, history, and community information.",
+  icons: {
+    icon: "/favicon.ico",
+  }
 };
 
 export default function RootLayout({ children }) {
