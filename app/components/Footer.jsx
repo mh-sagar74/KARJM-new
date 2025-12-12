@@ -12,9 +12,8 @@ export default function Footer() {
   { href: "/about-us", label: "About" },
   { href: "/contact-us", label: "Contact" },];
 
-  const contactUs = [{ href: "https://www.facebook.com/mr.sagar74", label: "Facebook" },
-  { href: "https://wa.me/8801300842702", label: "Whatsapp" },
-  { href: "https://x.com/MominulHaque04", label: "Twitter" }];
+  const contactUs = [{ href: "https://www.facebook.com/karjm1980/", label: "Facebook" },
+  { href: "https://wa.me/8801911935762", label: "Whatsapp" }];
 
   const devInfo = [{ href: "https://www.linkedin.com/in/mominul-haque-sagar-3a270123a/", label: "Linkedin" },
   { href: "https://github.com/mh-sagar74", label: "Github" },
@@ -28,7 +27,7 @@ export default function Footer() {
       <Box className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4  mt-[70px] md:mt-[100px] mb-[10px] md:mb-[15px] gap-8">
         <VStack>
           <Link href={"/"}>
-            <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] mb-2" source={{ uri: "/logo.png" }} />
+            <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px] mb-2" source={{ uri: "/logo.png" }} alt="KARJM logo" />
           </Link>
           <Text className="text-sm md:text-base text-black">
             Serving the community with faith, knowledge, and compassion since 1980.

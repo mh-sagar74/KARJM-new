@@ -1,10 +1,16 @@
-import { HStack } from "@/components/ui/hstack";
-import { Text } from "@/components/ui/text";
+import VisitUs from "@/app/components/VisitUs";
+import { CustomScrollDown } from "@/components/customScrollDown/CustomScrollDown";
+import { Grid, GridItem } from "@/components/ui/grid";
+
 
 export default function ContactUs() {
   return (
-    <>
-      <HStack><Text>Contact us Page</Text></HStack>
-    </>
+    <Grid className="grid-4 grid-cols-10">
+      <GridItem className="col-span-10">
+        <CustomScrollDown>
+          <VisitUs />
+        </CustomScrollDown>
+      </GridItem>
+    </Grid>
   )
 }

@@ -31,7 +31,7 @@ function Navbar() {
     <HStack className="gap-2 justify-between fixed top-0 right-0 left-0 w-full z-50 shadow-sm px-[20px] md:px-[60px] h-[60px] md:h-[80px] lg:h-[90px] bg-white" reversed={false} >
       <HStack className="items-center">
         <Link href={"/"}>
-          <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px]" source={{ uri: "/logo.png" }} />
+          <Image className="h-[50px] w-[50px] md:h-[60px] md:w-[60px]" source={{ uri: "/logo.png" }} alt="KARJM logo" />
         </Link>
         <Link href={"/"}>
           <Text className="text-[#006830] font-bold text-sm sm:text-lg md:text-xl">Khanjahan Ali (R:) Jame Masjid</Text>

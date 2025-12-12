@@ -1,8 +1,18 @@
-import { Text } from "@/components/ui/text";
-import React from "react";
+import AboutMosque from "@/app/components/AboutMosque";
+import { CustomScrollDown } from "@/components/customScrollDown/CustomScrollDown";
+import { Grid, GridItem } from "@/components/ui/grid";
+
 
 function AboutUs() {
-  return <Text>About Us</Text>;
+  return (
+    <Grid className="grid-4 grid-cols-10">
+      <GridItem className="col-span-10">
+        <CustomScrollDown>
+          <AboutMosque />
+        </CustomScrollDown>
+      </GridItem>
+    </Grid>
+  )
 }
 
 export default AboutUs;

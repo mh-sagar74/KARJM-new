@@ -9,7 +9,7 @@ import CardWithIcon from "@/components/cardWithIcon/CardWithIcon";
 
 export default function VisitUs() {
   const contactInfos = [{ icon: MapPin, title: "Address", description: "190 Haji Ismail Rd, Khulna (9100), Bangladesh" },
-  { icon: Phone, title: "Phone", description: "+880 1300842702" },
+  { icon: Phone, title: "Phone", description: "+880 1911935762" },
   { icon: Mail, title: "Email", description: "mhsagarcse02@gmail.com" },
   { icon: Clock, title: "Open Hours", description: "Opens every day, 5 minutes before each prayer time (waqt adhan)." }]
 
