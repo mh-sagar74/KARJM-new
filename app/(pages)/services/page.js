@@ -1,15 +1,9 @@
-import { Grid, GridItem } from "@/components/ui/grid";
-import ServiceProgram from "../../components/ServiceProgram.jsx";
-import { CustomScrollDown } from "@/components/customScrollDown/CustomScrollDown.jsx";
+import Services from "../../components/Services";
 
-export default function PrayerTimesPage() {
+export default function ServicesPage() {
   return (
-    <Grid className="grid-4 grid-cols-10">
-      <GridItem className="col-span-10">
-        <CustomScrollDown>
-          <ServiceProgram />
-        </CustomScrollDown>
-      </GridItem>
-    </Grid>
-  )
+    <div style={{ paddingTop: "100px", paddingBottom: "60px", minHeight: "100vh" }}>
+      <Services />
+    </div>
+  );
 }

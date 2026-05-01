@@ -25,7 +25,7 @@ export default function ClientLayout({ children }) {
       <StyledJsxRegistry>
         <GluestackUIProvider>
           <Navbar />
-          <main className="pt-[70px] md:pt-[90px] lg:pt-[100px] px-[20px] md:px-[60px]">
+          <main className="px-0 md:px-8">
             {children}
           </main>
           <ScrollUpButton />
