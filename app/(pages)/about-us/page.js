@@ -1,18 +1,9 @@
-import AboutMosque from "@/app/components/AboutMosque";
-import { CustomScrollDown } from "@/components/customScrollDown/CustomScrollDown";
-import { Grid, GridItem } from "@/components/ui/grid";
+import About from "../../components/About";
 
-
-function AboutUs() {
+export default function AboutPage() {
   return (
-    <Grid className="grid-4 grid-cols-10">
-      <GridItem className="col-span-10">
-        <CustomScrollDown>
-          <AboutMosque />
-        </CustomScrollDown>
-      </GridItem>
-    </Grid>
-  )
+    <div style={{ paddingTop: "100px", paddingBottom: "60px", minHeight: "100vh" }}>
+      <About />
+    </div>
+  );
 }
-
-export default AboutUs;
