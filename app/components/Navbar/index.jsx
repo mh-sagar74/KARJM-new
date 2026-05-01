@@ -36,18 +36,20 @@ export default function Navbar() {
   const containerStyle = {
     maxWidth: "1400px",
     margin: "0 auto",
-    padding: "0 24px",
+    padding: "0 20px",
     height: isScrolled ? "70px" : "85px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     transition: "height 0.3s ease",
+    minWidth: "0",
   };
 
   const navDesktopStyle = {
     display: "flex",
     alignItems: "center",
     gap: "8px",
+    flexShrink: 0,
   };
 
   const menuButtonStyle = {
@@ -121,7 +123,7 @@ export default function Navbar() {
       />
 
       <style jsx>{`
-        @media (max-width: 1024px) {
+        @media (max-width: 1100px) {
           .desktop-nav {
             display: none !important;
           }
@@ -129,10 +131,30 @@ export default function Navbar() {
             display: flex !important;
           }
         }
+        @media (min-width: 1101px) {
+          .desktop-nav {
+            gap: 6px !important;
+          }
+          .desktop-nav a {
+            padding: 6px 10px !important;
+            font-size: 0.9rem !important;
+          }
+          .cta-button {
+            padding: 8px 16px !important;
+            font-size: 0.85rem !important;
+            margin-left: 8px !important;
+          }
+        }
         .cta-button:hover {
           background-color: ${COLORS.secondary} !important;
           transform: translateY(-2px);
           box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        }
+        .desktop-nav a {
+          white-space: nowrap;
+        }
+        .navbar-container {
+          padding: 0 20px;
         }
       `}</style>
     </>

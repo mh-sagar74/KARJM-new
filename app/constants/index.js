@@ -15,6 +15,7 @@ export const NAV_ITEMS = [
   { href: "/prayer-times", label: "Prayer Times" },
   { href: "/services", label: "Services" },
   { href: "/about-us", label: "About" },
+  { href: "/committee", label: "Committee" },
   { href: "/contact-us", label: "Contact" },
 ];
 
