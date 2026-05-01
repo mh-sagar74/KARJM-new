@@ -26,8 +26,13 @@ export const SITE_INFO = {
   established: 1980,
   location: "Khulna, Bangladesh",
   address: "190 Haji Ismail Rd, Khulna (9100), Bangladesh",
+  addressLink: "https://maps.app.goo.gl/GERwCpFF9pDaEjd39",
   phone: "+880 1911935762",
+  phoneLink: "tel:+8801911935762",
   email: "mhsagarcse02@gmail.com",
+  emailLink: "mailto:mhsagarcse02@gmail.com",
+  facebook: "https://www.facebook.com/karjm1980/",
+  whatsappGroup: "https://chat.whatsapp.com/ET34byvKgZj3UMOUvFJ391",
 };
 
 export const PRAYER_DATA = {
@@ -45,15 +50,22 @@ export const PRAYER_DATA = {
 };
 
 export const ABOUT_DATA = {
-  description: "The Khanjahan Ali Rahmatullah Jame Masjid is a Sunni mosque located in Khulna, Bangladesh. Established in 1980, it has been serving the local community for several decades. This mosque is known for its beautiful architecture and tranquil atmosphere, making it a peaceful place for worship.",
-  features: ["Prayer facilities for men", "Kid-friendly environment", "Tranquil atmosphere", "Community gatherings"],
+  description:
+    "The Khanjahan Ali Rahmatullah Jame Masjid is a Sunni mosque located in Khulna, Bangladesh. Established in 1980, it has been serving the local community for several decades. This mosque is known for its beautiful architecture and tranquil atmosphere, making it a peaceful place for worship.",
+  features: [
+    "Prayer facilities for men",
+    "Kid-friendly environment",
+    "Tranquil atmosphere",
+    "Community gatherings",
+  ],
 };
 
 export const SERVICES_DATA = [
   {
     id: 1,
     title: "Islamic Education",
-    description: "Quran classes, Arabic lessons, and Islamic studies for all ages.",
+    description:
+      "Quran classes, Arabic lessons, and Islamic studies for all ages.",
     icon: "GraduationCap",
   },
   {
@@ -71,7 +83,8 @@ export const SERVICES_DATA = [
   {
     id: 4,
     title: "Nikah Service",
-    description: "Islamic marriage service including registration and officiation by the Imam.",
+    description:
+      "Islamic marriage service including registration and officiation by the Imam.",
     icon: "Gem",
   },
 ];
@@ -80,12 +93,20 @@ export const CONTACT_DATA = [
   { id: 1, title: "Address", content: SITE_INFO.address, icon: "MapPin" },
   { id: 2, title: "Phone", content: SITE_INFO.phone, icon: "Phone" },
   { id: 3, title: "Email", content: SITE_INFO.email, icon: "Mail" },
-  { id: 4, title: "Open Hours", content: "Opens every day, 5 minutes before each prayer time (waqt adhan).", icon: "Clock" },
+  {
+    id: 4,
+    title: "Open Hours",
+    content:
+      "Opens every day, 30 minutes before each prayer time (waqt adhan).",
+    icon: "Clock",
+  },
 ];
 
 export const WHATSAPP_DATA = {
   title: "Join Our Community",
-  description: "Scan the QR code to join our WhatsApp community for latest updates, announcements, and events.",
+  description:
+    "Scan the QR code to join our WhatsApp community for latest updates, announcements, and events.",
   ctaText: "Join WhatsApp Group",
-  groupLink: "https://whatsapp.com/channel/your-link-here",
+  groupLink: "https://chat.whatsapp.com/ET34byvKgZj3UMOUvFJ391",
 };
+

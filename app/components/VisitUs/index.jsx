@@ -114,15 +114,31 @@ export default function VisitUs() {
         <div style={contactGridStyle}>
           {CONTACT_DATA.map((contact) => {
             const IconComponent = iconMap[contact.icon];
+            const getLink = () => {
+              if (contact.title === "Address") return SITE_INFO.addressLink;
+              if (contact.title === "Phone") return SITE_INFO.phoneLink;
+              if (contact.title === "Email") return SITE_INFO.emailLink;
+              return null;
+            };
+            const link = getLink();
+            const content = (
+              <>
+                <div style={contactTitleStyle}>{contact.title}</div>
+                <div style={contactContentStyle}>{contact.content}</div>
+              </>
+            );
             return (
               <div key={contact.id} style={contactCardStyle} className="contact-card">
                 <div style={iconWrapperStyle}>
                   <IconComponent size={24} color={COLORS.white} />
                 </div>
-                <div>
-                  <div style={contactTitleStyle}>{contact.title}</div>
-                  <div style={contactContentStyle}>{contact.content}</div>
-                </div>
+                {link ? (
+                  <a href={link} target={contact.title === "Address" ? "_blank" : "_self"} rel="noopener noreferrer" style={{ textDecoration: "none" }}>
+                    {content}
+                  </a>
+                ) : (
+                  <div>{content}</div>
+                )}
               </div>
             );
           })}
@@ -142,6 +158,9 @@ export default function VisitUs() {
         .contact-card:hover {
           transform: translateY(-2px);
           box-shadow: 0 8px 24px rgba(0, 98, 65, 0.12) !important;
+        }
+        .contact-card a:hover {
+          cursor: pointer;
         }
       `}</style>
     </Section>

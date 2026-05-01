@@ -74,14 +74,15 @@ export default function WhatsAppCommunity() {
 
   const qrBoxStyle = {
     width: "200px",
-    height: "200px",
+    height: "240px",
     backgroundColor: COLORS.white,
     borderRadius: "16px",
     display: "flex",
+    flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     boxShadow: "0 12px 40px rgba(0, 0, 0, 0.3)",
-    padding: "16px",
+    padding: "12px",
     position: "relative",
   };
 
@@ -124,33 +125,47 @@ export default function WhatsAppCommunity() {
   };
 
   return (
-    <Section id="whatsapp" backgroundColor="transparent" className="whatsapp-section" style={sectionStyle}>
+    <Section
+      id="whatsapp"
+      backgroundColor="transparent"
+      className="whatsapp-section"
+      style={sectionStyle}
+    >
       <div style={patternStyle} />
-      
+
       <div style={contentStyle} className="whatsapp-content">
         <div style={textContentStyle}>
           <h2 style={titleStyle} className="whatsapp-title">
-            <span style={iconWrapperStyle}><MessageCircle size={32} /></span>
+            <span style={iconWrapperStyle}>
+              <MessageCircle size={32} />
+            </span>
             <span>{WHATSAPP_DATA.title}</span>
           </h2>
-          <p style={descStyle} className="whatsapp-desc">{WHATSAPP_DATA.description}</p>
+          <p style={descStyle} className="whatsapp-desc">
+            {WHATSAPP_DATA.description}
+          </p>
         </div>
 
         <div style={qrContainerStyle}>
           <div style={qrBoxStyle}>
             <div style={qrPlaceholderStyle}>
-              <Image 
-                src="/whatsapp-qr.png" 
-                alt="WhatsApp QR Code" 
-                width={160} 
-                height={160}
+              <Image
+                src="/wp_qr_code.png"
+                alt="WhatsApp QR Code"
+                width={164}
+                height={164}
                 style={{ objectFit: "contain" }}
               />
               <span style={scanTextStyle}>Scan to Join</span>
             </div>
           </div>
 
-          <Link href={WHATSAPP_DATA.groupLink} style={buttonStyle} className="whatsapp-btn">
+          <Link
+            href={WHATSAPP_DATA.groupLink}
+            style={buttonStyle}
+            target="_blank"
+            className="whatsapp-btn"
+          >
             {WHATSAPP_DATA.ctaText}
             <ArrowRight size={20} />
           </Link>

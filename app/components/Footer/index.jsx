@@ -76,8 +76,8 @@ export default function Footer() {
   };
 
   const socialLinks = [
-    { name: "Facebook", url: "https://www.facebook.com/karjm1980/" },
-    { name: "WhatsApp", url: "https://wa.me/8801911935762" },
+    { name: "Facebook", url: SITE_INFO.facebook },
+    { name: "WhatsApp", url: SITE_INFO.whatsappGroup },
   ];
 
   return (

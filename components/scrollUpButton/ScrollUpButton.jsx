@@ -20,7 +20,7 @@ export default function ScrollUpButton() {
       transition={{ duration: 0.3 }}
       onClick={handleArrowButton}
       aria-label="Scroll to top"
-      className="fixed bottom-6 right-6 z-50 bg-[#006830] text-white p-2 rounded-full"
+      className="fixed bottom-6 right-6 z-50 bg-[#006241] text-white p-3 rounded-full shadow-lg"
     >
       <motion.div
         animate={{ y: [0, -10, 0] }}
