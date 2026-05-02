@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { COLORS, NAV_ITEMS } from "../../constants";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { COLORS, NAV_ITEMS, MORE_ITEMS } from "../../constants";
 import Logo from "./Logo";
 import NavLink from "./NavLink";
 import MobileMenu from "./MobileMenu";
@@ -9,6 +11,8 @@ import MobileMenu from "./MobileMenu";
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showMore, setShowMore] = useState(false);
+  const pathName = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -95,11 +99,81 @@ export default function Navbar() {
             {NAV_ITEMS.map((item, index) => (
               <NavLink key={index} href={item.href} label={item.label} />
             ))}
-            <a
-              href="/contact-us"
-              style={ctaButtonStyle}
-              className="cta-button"
+
+            <div
+              style={{
+                position: "relative",
+                height: "100%",
+                display: "flex",
+                alignItems: "center",
+              }}
+              onMouseEnter={() => setShowMore(true)}
+              onMouseLeave={() => setShowMore(false)}
             >
+              <span
+                style={{
+                  cursor: "pointer",
+                  color: COLORS.text,
+                  fontWeight: "500",
+                  fontSize: "0.95rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "4px",
+                  padding: "8px 12px",
+                }}
+                className="more-btn"
+              >
+                More ▾
+              </span>
+
+              <div
+                  style={{
+                    position: "absolute",
+                    top: "calc(100%)",
+                    left: "50%",
+                    transform: "translateX(-50%)",
+                    backgroundColor: COLORS.white,
+                    borderRadius: "12px",
+                    boxShadow: "0 10px 40px rgba(0,0,0,0.15)",
+                    padding: "8px 0",
+                    minWidth: "150px",
+                    zIndex: 100,
+                    border: "1px solid rgba(0,98,65,0.1)",
+                    opacity: showMore ? 1 : 0,
+                    transform: showMore ? "translateX(-50%) translateY(0)" : "translateX(-50%) translateY(-10px)",
+                    pointerEvents: showMore ? "auto" : "none",
+                    transition: "all 0.25s ease",
+                  }}
+                  className="dropdown-menu"
+                >
+                  {MORE_ITEMS.map((item, index) => {
+                    const isActive = pathName === item.href;
+                    return (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        style={{
+                          display: "block",
+                          padding: "12px 20px",
+                          color: isActive ? COLORS.primary : COLORS.text,
+                          textDecoration: "none",
+                          fontSize: "0.95rem",
+                          fontWeight: isActive ? "600" : "500",
+                          transition: "all 0.2s ease",
+                          borderLeft: isActive
+                            ? `3px solid ${COLORS.secondary}`
+                            : "3px solid transparent",
+                        }}
+                        className="dropdown-link"
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  })}
+                </div>
+            </div>
+
+            <a href="/contact-us" style={ctaButtonStyle} className="cta-button">
               Donate
             </a>
           </nav>
@@ -150,11 +224,17 @@ export default function Navbar() {
           transform: translateY(-2px);
           box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
         }
-        .desktop-nav a {
-          white-space: nowrap;
-        }
         .navbar-container {
           padding: 0 20px;
+        }
+        .more-btn:hover {
+          background-color: ${COLORS.accent} !important;
+        }
+        .dropdown-link:hover {
+          background-color: ${COLORS.accent} !important;
+          color: ${COLORS.primary} !important;
+          padding-left: 24px !important;
+          transform: translateX(4px);
         }
       `}</style>
     </>

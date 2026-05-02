@@ -32,3 +32,115 @@ body {
 html {
   scrollbar-gutter: stable;
 }
+
+/* Nav Link Hover Effects */
+a.nav-link:hover {
+  color: #006241 !important;
+  transform: translateY(-2px);
+}
+
+a.nav-link:hover .hover-underline {
+  width: 80%;
+  opacity: 1;
+}
+
+a.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 60%;
+  background-color: #D4AF37;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+a.nav-link:hover::before {
+  width: 4px;
+}
+
+/* Footer Link Hover Effects */
+a.footer-link {
+  transition: color 0.3s ease;
+}
+
+a.footer-link:hover {
+  color: #D4AF37 !important;
+  padding-left: 4px;
+}
+
+/* Dropdown Menu Hover Effects */
+.dropdown-link:hover {
+  background-color: #F9F7F2 !important;
+  color: #006241 !important;
+  padding-left: 24px !important;
+  transform: translateX(4px);
+}
+
+.dropdown-link.active {
+  color: #006241 !important;
+  font-weight: 600 !important;
+  background-color: #F9F7F2 !important;
+}
+
+/* Button Hover Effects */
+.cta-button:hover {
+  background-color: #D4AF37 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4) !important;
+  background-color: #e5c04b !important;
+}
+
+/* More button hover */
+.more-btn:hover {
+  background-color: #F9F7F2 !important;
+}
+
+/* Creator link hover */
+.creator-link {
+  transition: all 0.3s ease;
+}
+
+.creator-link:hover {
+  color: #fff !important;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.9), 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Hero Button Hover Effects */
+a.hero-cta-primary {
+  transition: all 0.3s ease;
+}
+
+a.hero-cta-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.6) !important;
+  background-color: #e5c04b !important;
+}
+
+a.hero-cta-secondary {
+  transition: all 0.3s ease;
+}
+
+a.hero-cta-secondary:hover {
+  background-color: #fff !important;
+  color: #006241 !important;
+}
+
+/* Committee Preview CTA Button */
+a.committee-cta {
+  transition: all 0.3s ease;
+}
+
+a.committee-cta:hover {
+  background-color: #D4AF37 !important;
+  color: #2D2D2D !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.3);
+}

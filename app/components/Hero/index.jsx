@@ -15,10 +15,10 @@ export default function Hero() {
   const containerStyle = {
     position: "relative",
     width: "100%",
-    height: "calc(100vh - 85px)",
-    minHeight: "calc(600px - 85px)",
+    height: "calc(100dvh - 70px)",
+    minHeight: "calc(500px - 70px)",
     overflow: "hidden",
-    marginTop: "85px",
+    marginTop: "70px",
   };
 
   const backgroundStyle = {
@@ -55,7 +55,7 @@ export default function Hero() {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    padding: "20px",
+    padding: "16px",
     textAlign: "center",
   };
 
@@ -131,7 +131,7 @@ export default function Hero() {
 
   const scrollIndicatorStyle = {
     position: "absolute",
-    bottom: "40px",
+    bottom: "clamp(20px, 5vh, 30px)",
     left: "50%",
     transform: "translateX(-50%)",
     display: "flex",
@@ -140,6 +140,7 @@ export default function Hero() {
     gap: "8px",
     opacity: loaded ? 1 : 0,
     transition: "opacity 0.8s ease-out 1s",
+    paddingBottom: "env(safe-area-inset-bottom, 10px)",
   };
 
   const scrollTextStyle = {
@@ -235,11 +236,11 @@ export default function Hero() {
         }
         @media (max-width: 640px) {
           .hero-content {
-            padding-bottom: 80px;
+            padding-bottom: 50px;
+            padding-top: 60px;
           }
         }
       `}</style>
     </section>
   );
 }
-

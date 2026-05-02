@@ -67,6 +67,7 @@ export default function VisitUs() {
     borderRadius: "12px",
     border: "1px solid rgba(0, 98, 65, 0.1)",
     boxShadow: "0 2px 12px rgba(0, 98, 65, 0.06)",
+    transition: "all 0.3s ease",
   };
 
   const iconWrapperStyle = {
@@ -155,9 +156,12 @@ export default function VisitUs() {
             grid-template-columns: 1fr 1fr !important;
           }
         }
+        .contact-card {
+          transition: all 0.3s ease;
+        }
         .contact-card:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(0, 98, 65, 0.12) !important;
+          transform: translateY(-8px);
+          box-shadow: 0 12px 32px rgba(0, 98, 65, 0.15) !important;
         }
         .contact-card a:hover {
           cursor: pointer;

@@ -14,6 +14,9 @@ export const NAV_ITEMS = [
   { href: "/", label: "Home" },
   { href: "/prayer-times", label: "Prayer Times" },
   { href: "/services", label: "Services" },
+];
+
+export const MORE_ITEMS = [
   { href: "/about-us", label: "About" },
   { href: "/committee", label: "Committee" },
   { href: "/contact-us", label: "Contact" },
@@ -26,11 +29,12 @@ export const SITE_INFO = {
   logo: "/logo.png",
   established: 1980,
   location: "Khulna, Bangladesh",
-  address: "190 Haji Ismail Rd, Khulna (9100), Bangladesh",
+  address: "Banargati (Mokbul Bazar), Haji Ismail Rd, Sonadanga, Khulna",
   addressLink: "https://maps.app.goo.gl/GERwCpFF9pDaEjd39",
-  phone: "+880 1911935762",
-  phoneLink: "tel:+8801911935762",
-  email: "mhsagarcse02@gmail.com",
+  phone: "+880 1717-583815",
+  phoneLink: "tel:+8801717583815",
+  email: "khanjahanali.masjid@gmail.com",
+  emailLink: "mailto:khanjahanali.masjid@gmail.com",
   emailLink: "mailto:mhsagarcse02@gmail.com",
   facebook: "https://www.facebook.com/karjm1980/",
   whatsappGroup: "https://chat.whatsapp.com/ET34byvKgZj3UMOUvFJ391",

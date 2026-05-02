@@ -3,8 +3,10 @@
 import { COLORS } from "../../constants";
 import { FOUNDER_DATA, ALL_COMMITTEE } from "../../constants/committee";
 
-const currentCommittee = ALL_COMMITTEE.filter(m => m.isCurrentMember !== false);
-const pastCommittee = ALL_COMMITTEE.filter(m => m.isCurrentMember === false);
+const currentCommittee = ALL_COMMITTEE.filter(m => m.status === "current");
+const pastCommittee = ALL_COMMITTEE.filter(m => m.status === "former" || m.status === "deceased");
+const deceasedMembers = pastCommittee.filter(m => m.status === "deceased");
+const formerMembers = pastCommittee.filter(m => m.status === "former");
 import { Users, Heart, Sparkles } from "lucide-react";
 import Image from "next/image";
 
@@ -233,53 +235,93 @@ const founderImageStyle = {
         </div>
       </section>
 
-      {/* Past Members */}
-      <section style={sectionStyle}>
-        <div style={headerStyle}>
-          <h2 style={titleStyle}>
-            <Heart size={28} />
-            Past Members
-          </h2>
-          <p style={subtitleStyle}>
-            Honoring our predecessors who built this community
-          </p>
-        </div>
-
-        <div style={pastCreditStyle}>
-          <p style={{ color: COLORS.text, fontSize: "0.95rem" }}>
-            🌿 <strong>In Recognition</strong> 🌿<br />
-            We express our heartfelt gratitude to all past members for their 
-            invaluable service and dedication to our mosque. May Allah grant them 
-            endless rewards (Jannah).
-          </p>
-        </div>
-
-        <div style={gridStyle}>
-          {pastCommittee.map((member) => (
-            <div key={member.id} style={cardStyle} className="committee-card">
-              <Image
-                src={member.avatar}
-                alt={member.name}
-                width={90}
-                height={90}
-                style={avatarStyle}
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
-              />
-              <div style={{ display: 'none', width: '90px', height: '90px', borderRadius: '50%', backgroundColor: COLORS.secondary, margin: '0 auto 14px', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: COLORS.white, fontSize: '1.75rem', fontWeight: '700' }}>
-                  {member.name.charAt(0)}
-                </span>
+      {/* Past Members - Former (Left but alive) */}
+      {formerMembers.length > 0 && (
+        <section style={sectionStyle}>
+          <div style={headerStyle}>
+            <h2 style={titleStyle}>
+              <Heart size={28} />
+              Former Members
+            </h2>
+            <p style={subtitleStyle}>
+              Previous committee members who served our community
+            </p>
+          </div>
+          <div style={gridStyle}>
+            {formerMembers.map((member) => (
+              <div key={member.id} style={cardStyle} className="committee-card">
+                <Image
+                  src={member.avatar}
+                  alt={member.name}
+                  width={90}
+                  height={90}
+                  style={avatarStyle}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div style={{ display: 'none', width: '90px', height: '90px', borderRadius: '50%', backgroundColor: COLORS.secondary, margin: '0 auto 14px', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ color: COLORS.white, fontSize: '1.75rem', fontWeight: '700' }}>
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+                <div style={nameStyle}>{member.name}</div>
+                <div style={positionStyle}>{member.position}</div>
               </div>
-              <div style={nameStyle}>{member.name}</div>
-              <div style={positionStyle}>{member.position}</div>
-              <div style={duaNoteStyle}>🤲 Seek Dua for them</div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Past Members - Deceased */}
+      {deceasedMembers.length > 0 && (
+        <section style={sectionStyle}>
+          <div style={headerStyle}>
+            <h2 style={titleStyle}>
+              <Heart size={28} />
+              In Loving Memory
+            </h2>
+            <p style={subtitleStyle}>
+              Honoring those who passed away - may Allah grant them Jannah
+            </p>
+          </div>
+
+          <div style={pastCreditStyle}>
+            <p style={{ color: COLORS.text, fontSize: "0.95rem" }}>
+              🌿 <strong>Seek Dua for them</strong> 🌿<br />
+              We remember our beloved members who have passed away. Their service 
+              to our mosque community will always be remembered.
+            </p>
+          </div>
+
+          <div style={gridStyle}>
+            {deceasedMembers.map((member) => (
+              <div key={member.id} style={cardStyle} className="committee-card">
+                <Image
+                  src={member.avatar}
+                  alt={member.name}
+                  width={90}
+                  height={90}
+                  style={avatarStyle}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div style={{ display: 'none', width: '90px', height: '90px', borderRadius: '50%', backgroundColor: COLORS.secondary, margin: '0 auto 14px', alignItems: 'center', justifyContent: 'center' }}>
+                  <span style={{ color: COLORS.white, fontSize: '1.75rem', fontWeight: '700' }}>
+                    {member.name.charAt(0)}
+                  </span>
+                </div>
+                <div style={nameStyle}>{member.name}</div>
+                <div style={positionStyle}>{member.position}</div>
+                <div style={duaNoteStyle}>🤲 Seek Dua for them</div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <style jsx>{`
         .committee-card:hover {
