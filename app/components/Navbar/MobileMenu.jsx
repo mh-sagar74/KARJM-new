@@ -19,6 +19,8 @@ export default function MobileMenu({ isOpen, onClose }) {
     
     if (isOpen) {
       document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
       requestAnimationFrame(() => {
         setVisible(true);
         requestAnimationFrame(() => {
@@ -30,6 +32,8 @@ export default function MobileMenu({ isOpen, onClose }) {
       const timer = setTimeout(() => {
         setVisible(false);
         document.body.style.overflow = "";
+        document.body.style.position = "";
+        document.body.style.width = "";
       }, 400);
       return () => clearTimeout(timer);
     }
@@ -57,7 +61,7 @@ export default function MobileMenu({ isOpen, onClose }) {
     right: 0,
     width: "300px",
     maxWidth: "85vw",
-    height: "100vh",
+    height: "100dvh",
     backgroundColor: COLORS.white,
     transform: isAnimating 
       ? "translateX(0) scale(1)" 
@@ -68,6 +72,8 @@ export default function MobileMenu({ isOpen, onClose }) {
     boxShadow: "-8px 0 30px rgba(0, 0, 0, 0.2)",
     display: visible ? "flex" : "none",
     flexDirection: "column",
+    paddingTop: "env(safe-area-inset-top, 0px)",
+    paddingBottom: "env(safe-area-inset-bottom, 0px)",
   };
 
   const headerStyle = {
@@ -75,6 +81,7 @@ export default function MobileMenu({ isOpen, onClose }) {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "20px",
+    paddingTop: "calc(20px + env(safe-area-inset-top, 0px))",
     borderBottom: `1px solid ${COLORS.accent}`,
   };
 
@@ -101,11 +108,13 @@ export default function MobileMenu({ isOpen, onClose }) {
     display: "flex",
     flexDirection: "column",
     padding: "20px",
+    paddingBottom: "calc(20px + env(safe-area-inset-bottom, 20px))",
     gap: "8px",
   };
 
   const footerStyle = {
     padding: "20px",
+    paddingBottom: "calc(20px + env(safe-area-inset-bottom, 20px))",
     borderTop: `1px solid ${COLORS.accent}`,
     display: "flex",
     justifyContent: "center",
