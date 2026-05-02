@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { COLORS, SITE_INFO, NAV_ITEMS } from "../../constants";
+import { COLORS, SITE_INFO, NAV_ITEMS, MORE_ITEMS } from "../../constants";
 
 export default function Footer() {
   const footerStyle = {
@@ -61,7 +61,7 @@ export default function Footer() {
     color: COLORS.accent,
     textDecoration: "none",
     marginBottom: "12px",
-    transition: "color 0.3s ease",
+    transition: "all 0.3s ease",
   };
 
   const bottomStyle = {
@@ -103,7 +103,12 @@ export default function Footer() {
           <div>
             <h3 style={sectionTitleStyle}>Quick Links</h3>
             {NAV_ITEMS.map((item, index) => (
-              <Link key={index} href={item.href} style={linkStyle} className="footer-link">
+              <Link key={`nav-${index}`} href={item.href} style={linkStyle} className="footer-link">
+                {item.label}
+              </Link>
+            ))}
+            {MORE_ITEMS.map((item, index) => (
+              <Link key={`more-${index}`} href={item.href} style={linkStyle} className="footer-link">
                 {item.label}
               </Link>
             ))}
@@ -135,6 +140,7 @@ export default function Footer() {
               href="https://mominulhaquesagar.is-a.dev/" 
               target="_blank"
               style={{ color: COLORS.secondary, textDecoration: "none" }}
+              className="creator-link"
             >
               Mominul Haque
             </Link>
@@ -143,9 +149,6 @@ export default function Footer() {
       </div>
 
       <style jsx>{`
-        .footer-link:hover {
-          color: ${COLORS.secondary} !important;
-        }
         @media (min-width: 768px) {
           .footer-grid {
             grid-template-columns: 2fr 1fr 1fr !important;

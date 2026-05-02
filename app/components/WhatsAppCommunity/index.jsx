@@ -116,6 +116,7 @@ export default function WhatsAppCommunity() {
     transition: "all 0.3s ease",
     border: "none",
     cursor: "pointer",
+    boxShadow: "0 4px 15px rgba(212, 175, 55, 0.3)",
   };
 
   const orTextStyle = {

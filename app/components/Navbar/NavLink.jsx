@@ -14,13 +14,10 @@ export default function NavLink({ href, label, onClick, isMobile = false }) {
     fontWeight: "500",
     padding: isMobile ? "12px 0" : "8px 16px",
     cursor: "pointer",
-    transition: "color 0.3s ease",
+    transition: "all 0.3s ease",
     textDecoration: "none",
     color: isActive ? COLORS.primary : COLORS.text,
-  };
-
-  const hoverStyles = {
-    color: COLORS.primary,
+    display: "inline-block",
   };
 
   return (
@@ -45,15 +42,6 @@ export default function NavLink({ href, label, onClick, isMobile = false }) {
         }}
         className="hover-underline"
       />
-      <style jsx>{`
-        .nav-link:hover {
-          color: ${COLORS.primary};
-        }
-        .nav-link:hover .hover-underline {
-          width: 80%;
-          opacity: 1;
-        }
-      `}</style>
     </Link>
   );
 }

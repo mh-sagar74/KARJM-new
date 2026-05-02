@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { COLORS, NAV_ITEMS, SITE_INFO } from "../../constants";
+import { COLORS, NAV_ITEMS, MORE_ITEMS, SITE_INFO } from "../../constants";
 import NavLink from "./NavLink";
 
 export default function MobileMenu({ isOpen, onClose }) {
@@ -139,6 +139,25 @@ export default function MobileMenu({ isOpen, onClose }) {
               key={index}
               style={{
                 animationDelay: isAnimating ? `${index * 0.1}s` : "0s",
+              }}
+              className="mobile-nav-item"
+            >
+              <NavLink
+                href={item.href}
+                label={item.label}
+                onClick={onClose}
+                isMobile
+              />
+            </div>
+          ))}
+          
+          <div style={{ height: "1px", backgroundColor: COLORS.accent, margin: "12px 0" }} />
+          
+          {MORE_ITEMS.map((item, index) => (
+            <div
+              key={`more-${index}`}
+              style={{
+                animationDelay: isAnimating ? `${(NAV_ITEMS.length + 1) * 0.1}s` : "0s",
               }}
               className="mobile-nav-item"
             >
