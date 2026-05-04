@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const FOUNDER_DATA = {
   name: "Mobidul Haque",
   title: "Founder & Land Donor",
@@ -9,7 +11,7 @@ export const FOUNDER_DATA = {
 
 export const ALL_COMMITTEE = [
   {
-    id: "7b1a2d3e-4f5g-6h7i-8j9k-0l1m2n3o4p5q",
+    id: uuidv4(),
     name: "জনাব মোঃ মোমিনুল হক",
     position: "Mutawalli",
     phone: "01300-842702",
@@ -17,7 +19,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a1b2c3d4-e5f6-4a5b-8c9d-e1f2a3b4c5d6",
+    id: uuidv4(),
     name: "আলহাজ মোঃ মোফাজ্জেল হোসেন",
     position: "President",
     phone: "01718-965813",
@@ -25,15 +27,15 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f47ac10b-58cc-4372-a567-0e02b2c3d4e5",
-    name: "জনাব মোঃ শফিকুল ইসলাম জুয়েল",
+    id: uuidv4(),
+    name: "জনাব মোঃ শফিকুল ইসলাম জুয়েল",
     position: "Senior Vice President",
     phone: "01711-308508",
     avatar: "/committee/placeholder.jpg",
     status: "current",
   },
   {
-    id: "2d3e4f5g-6h7i-8j9k-0l1m-2n3o4p5q6r7s",
+    id: uuidv4(),
     name: "জনাব মোঃ মাহবুব আলম",
     position: "Vice President",
     phone: "01733-224858",
@@ -41,7 +43,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "9b1c2d3e-4f5g-6h7i-8j9k-0l1m2n3o4p5q",
+    id: uuidv4(),
     name: "জনাব আলহাজ শেখ আব্দুল জলিল",
     position: "Vice President",
     phone: "01716-952104",
@@ -49,7 +51,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c7b1a2d3-e4f5-g6h7-i8j9-k0l1m2n3o4p5",
+    id: uuidv4(),
     name: "জনান আলহাজ্বা মোঃ গাউসুল হক",
     position: "Vice President",
     phone: "",
@@ -57,7 +59,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+    id: uuidv4(),
     name: "জনাব অ্যাডঃ এস এম শরিফুল ইসলাম",
     position: "Vice President",
     phone: "01912-067684",
@@ -65,7 +67,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e1f2a3b4-c5d6-e7f8-g9h0-i1j2k3l4m5n6",
+    id: uuidv4(),
     name: "জনাব মোঃ আব্দুল আলীম",
     position: "General Secretary",
     phone: "01911-935762",
@@ -73,7 +75,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f9g0h1i2-j3k4-l5m6-n7o8-p9q0r1s2t3u4",
+    id: uuidv4(),
     name: "জনাব মোঃ কামরুল ইসলাম",
     position: "Joint General Secretary",
     phone: "01712-334021",
@@ -81,7 +83,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a5b6c7d8-e9f0-g1h2-i3j4-k5l6m7n8o9p0",
+    id: uuidv4(),
     name: "জনাব মোঃ আহসান হাবীব বাবু",
     position: "Assistant Joint General Secretary",
     phone: "01673-042174",
@@ -89,15 +91,15 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b6c7d8e9-f0a1-b2c3-d4e5-f6g7h8i9j0k1",
-    name: "জনাব মোঃ ওবায়দুল্লাহ লিটন",
+    id: uuidv4(),
+    name: "জনাব মোঃ ওবায়দুল্লাহ লিটন",
     position: "Treasurer",
     phone: "01711-137688",
     avatar: "/committee/placeholder.jpg",
     status: "current",
   },
   {
-    id: "c7d8e9f0-a1b2-c3d4-e5f6-g7h8i9j0k1l2",
+    id: uuidv4(),
     name: "জনাব মোঃ সাইফুল ইসলাম",
     position: "Member",
     phone: "01711-224467",
@@ -105,7 +107,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d8e9f0a1-b2c3-d4e5-f6g7-h8i9j0k1l2m3",
+    id: uuidv4(),
     name: "জনাব মোঃ জিল্লুর রহমান",
     position: "Member",
     phone: "01914-222883",
@@ -113,7 +115,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e9f0a1b2-c3d4-e5f6-g7h8-i9j0k1l2m3n4",
+    id: uuidv4(),
     name: "জনাব মোঃ হারুনুর রশিদ",
     position: "Member",
     phone: "01712-140656",
@@ -121,7 +123,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f0a1b2c3-d4e5-f6g7-h8i9-j0k1l2m3n4o5",
+    id: uuidv4(),
     name: "জনাব মোঃ আবুল কালাম আজাদ",
     position: "Member",
     phone: "01712-054593",
@@ -129,7 +131,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+    id: uuidv4(),
     name: "জনাব মোঃ শফিকুল ইসলাম",
     position: "Member",
     phone: "01715-422894",
@@ -137,7 +139,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7",
+    id: uuidv4(),
     name: "জনাব মোঃ আমিনুল হক",
     position: "Member",
     phone: "01718-622998",
@@ -145,7 +147,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8",
+    id: uuidv4(),
     name: "জনাব মোঃ ইউনুস আলী ভূঁইয়া",
     position: "Member",
     phone: "01711-903670",
@@ -153,7 +155,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+    id: uuidv4(),
     name: "জনাব মোঃ লুৎফর রহমান",
     position: "Member",
     phone: "01715-081912",
@@ -161,7 +163,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+    id: uuidv4(),
     name: "জনাব মোঃ তৌহিদুল ইসলাম",
     position: "Member",
     phone: "01712-211464",
@@ -169,7 +171,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1",
+    id: uuidv4(),
     name: "জনাব মোঃ জহিরুল হক ভূঁইয়া",
     position: "Member",
     phone: "01711-193437",
@@ -177,7 +179,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a7b8c9d0-e1f2-g3h4-i5j6-k7l8m9n0o1p2",
+    id: uuidv4(),
     name: "জনাব মোঃ নজরুল ইসলাম বাদল",
     position: "Member",
     phone: "01715-333034",
@@ -185,7 +187,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b8c9d0e1-f2g3-h4i5-j6k7-l8m9n0o1p2q3",
+    id: uuidv4(),
     name: "জনাব মোঃ মোশাররফ হোসেন ভূঁইয়া",
     position: "Member",
     phone: "01712-231168",
@@ -193,7 +195,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c9d0e1f2-g3h4-i5j6-k7l8-m9n0o1p2q3r4",
+    id: uuidv4(),
     name: "জনাব মোঃ সাইদুর রহমান",
     position: "Member",
     phone: "01711-042851",
@@ -201,7 +203,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d0e1f2g3-h4i5-j6k7-l8m9-n0o1p2q3r4s5",
+    id: uuidv4(),
     name: "জনাব মোঃ মজিবুর রহমান",
     position: "Member",
     phone: "01912-225301",
@@ -209,7 +211,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6",
+    id: uuidv4(),
     name: "জনাব মোঃ বিল্লাল হোসেন",
     position: "Member",
     phone: "01732-263233",
@@ -217,7 +219,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f2g3h4i5-j6k7-l8m9-n0o1-p2q3r4s5t6u7",
+    id: uuidv4(),
     name: "জনাব মোঃ মিজানুর রহমান",
     position: "Member",
     phone: "01711-385077",
@@ -225,7 +227,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8",
+    id: uuidv4(),
     name: "জনাব মোঃ নাজমুল হোসেন ভূঁইয়া",
     position: "Member",
     phone: "01711-073868",
@@ -233,7 +235,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9",
+    id: uuidv4(),
     name: "জনাব মোঃ মনির হোসেন",
     position: "Member",
     phone: "01711-155829",
@@ -241,7 +243,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0",
+    id: uuidv4(),
     name: "জনাব মোঃ সিরাজুল ইসলাম",
     position: "Member",
     phone: "01715-021950",
@@ -249,7 +251,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1",
+    id: uuidv4(),
     name: "জনাব মোঃ আতিকুর রহমান",
     position: "Member",
     phone: "01711-364245",
@@ -257,7 +259,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2",
+    id: uuidv4(),
     name: "জনাব মোঃ কামাল হোসেন",
     position: "Member",
     phone: "01711-203753",
@@ -265,7 +267,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f8g9h0i1-j2k3-l5m6-n7o8-p9q0r1s2t3u4",
+    id: uuidv4(),
     name: "জনাব মোঃ আবুল কালাম (অপু)",
     position: "Member",
     phone: "01715-018610",
@@ -273,7 +275,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a9b0c1d2-e3f4-g5h6-i7j8-k9l0m1n2o3p4",
+    id: uuidv4(),
     name: "জনাব মোঃ মমিনুল হক মিনু",
     position: "Member",
     phone: "01711-344265",
@@ -281,7 +283,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b0c1d2e3-f4g5-h6i7-j8k9-l0m1n2o3p4q5",
+    id: uuidv4(),
     name: "জনাব মোঃ আবুল কাসেম ভূঁইয়া",
     position: "Member",
     phone: "01712-163456",
@@ -289,7 +291,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c1d2e3f4-g5h6-i7j8-k9l0-m1n2o3p4q5r6",
+    id: uuidv4(),
     name: "জনাব মোঃ জহিরুল ইসলাম মন্টু",
     position: "Member",
     phone: "01914-257602",
@@ -297,7 +299,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d2e3f4g5-h6i7-j8k9-l0m1-n2o3p4q5r6s7",
+    id: uuidv4(),
     name: "জনাব মোঃ জাকির হোসেন ভূঁইয়া",
     position: "Member",
     phone: "01711-454593",
@@ -305,7 +307,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e3f4g5h6-i7j8-k9l0-m1n2-o3p4q5r6s7t8",
+    id: uuidv4(),
     name: "জনাব মোঃ আব্দুল আজিজ ভূঁইয়া",
     position: "Member",
     phone: "01716-168128",
@@ -313,7 +315,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f4g5h6i7-j8k9-l0m1-n2o3-p4q5r6s7t8u9",
+    id: uuidv4(),
     name: "জনাব মোঃ জাকির হোসেন",
     position: "Member",
     phone: "01711-827252",
@@ -321,7 +323,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a5b6c7d8-e9f0-g1h2-i3j4-k5l6m7n8o9p0",
+    id: uuidv4(),
     name: "জনাব মোঃ কাইয়ুম হোসেন",
     position: "Member",
     phone: "01716-042851",
@@ -329,7 +331,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b6c7d8e9-f0a1-b2c3-d4e5-f6g7h8i9j0k1",
+    id: uuidv4(),
     name: "জনাব মোঃ রফিকুল ইসলাম",
     position: "Member",
     phone: "01711-137688",
@@ -337,7 +339,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c7d8e9f0-a1b2-c3d4-e5f6-g7h8i9j0k1l2",
+    id: uuidv4(),
     name: "জনাব মোঃ লিয়াকত আলী ভূঁইয়া",
     position: "Member",
     phone: "01911-308508",
@@ -345,7 +347,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d8e9f0a1-b2c3-d4e5-f6g7-h8i9j0k1l2m3",
+    id: uuidv4(),
     name: "জনাব মোঃ আক্তার হোসেন মাসুম",
     position: "Member",
     phone: "01711-975936",
@@ -353,7 +355,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e9f0a1b2-c3d4-e5f6-g7h8-i9j0k1l2m3n4",
+    id: uuidv4(),
     name: "জনাব মোঃ শফিকুল ইসলাম শফিক",
     position: "Member",
     phone: "01732-230006",
@@ -361,7 +363,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f0a1b2c3-d4e5-f6g7-h8i9-j0k1l2m3n4o5",
+    id: uuidv4(),
     name: "জনাব মোঃ মজিবুর রহমান",
     position: "Member",
     phone: "01715-412586",
@@ -369,7 +371,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+    id: uuidv4(),
     name: "জনাব মোঃ আবুল কালাম",
     position: "Member",
     phone: "01711-026046",
@@ -377,7 +379,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b2c3d4e5-f6g7-h8i9-j0k1-l2m3n4o5p6q7",
+    id: uuidv4(),
     name: "জনাব মোঃ কামাল হোসেন ভূঁইয়া",
     position: "Member",
     phone: "01712-259160",
@@ -385,7 +387,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c3d4e5f6-g7h8-i9j0-k1l2-m3n4o5p6q7r8",
+    id: uuidv4(),
     name: "জনাব মোঃ ইব্রাহিম খলিল ভূঁইয়া",
     position: "Member",
     phone: "01711-133519",
@@ -393,7 +395,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d4e5f6g7-h8i9-j0k1-l2m3-n4o5p6q7r8s9",
+    id: uuidv4(),
     name: "জনাব মোঃ আলমগীর হোসেন ভূঁইয়া",
     position: "Member",
     phone: "01711-042137",
@@ -401,7 +403,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e5f6g7h8-i9j0-k1l2-m3n4-o5p6q7r8s9t0",
+    id: uuidv4(),
     name: "জনাব মোঃ মাহফুজুর রহমান",
     position: "Member",
     phone: "01711-155829",
@@ -409,7 +411,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f6g7h8i9-j0k1-l2m3-n4o5-p6q7r8s9t0u1",
+    id: uuidv4(),
     name: "জনাব মোঃ জহিরুল ইসলাম মাসুম",
     position: "Member",
     phone: "01711-447545",
@@ -417,7 +419,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a7b8c9d0-e1f2-g3h4-i5j6-k7l8m9n0o1p2",
+    id: uuidv4(),
     name: "জনাব মোঃ আসাদুজ্জামান",
     position: "Member",
     phone: "01716-465494",
@@ -425,7 +427,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b8c9d0e1-f2g3-h4i5-j6k7-l8m9n0o1p2q3",
+    id: uuidv4(),
     name: "জনাব মোঃ জহিরুল ইসলাম মন্টু",
     position: "Member",
     phone: "01712-067684",
@@ -433,7 +435,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c9d0e1f2-g3h4-i5j6-k7l8-m9n0o1p2q3r4",
+    id: uuidv4(),
     name: "জনাব মোঃ সাইদুল ইসলাম সাঈদ",
     position: "Member",
     phone: "01711-203753",
@@ -441,7 +443,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d0e1f2g3-h4i5-j6k7-l8m9-n0o1p2q3r4s5",
+    id: uuidv4(),
     name: "জনাব মোঃ শরিফুল ইসলাম",
     position: "Member",
     phone: "01715-021950",
@@ -449,7 +451,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e1f2g3h4-i5j6-k7l8-m9n0-o1p2q3r4s5t6",
+    id: uuidv4(),
     name: "জনাব মোঃ হারুনুর রশিদ",
     position: "Member",
     phone: "01711-364245",
@@ -457,7 +459,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f2g3h4i5-j6k7-l8m9-n0o1-p2q3r4s5t6u7",
+    id: uuidv4(),
     name: "জনাব মোঃ ইসমাইল হোসেন",
     position: "Member",
     phone: "01711-137688",
@@ -465,7 +467,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "a3b4c5d6-e7f8-g9h0-i1j2-k3l4m5n6o7p8",
+    id: uuidv4(),
     name: "জনাব মোঃ আব্দুল মান্নান",
     position: "Member",
     phone: "01711-454593",
@@ -473,7 +475,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "b4c5d6e7-f8g9-h0i1-j2k3-l4m5n6o7p8q9",
+    id: uuidv4(),
     name: "জনাব মোঃ শাহ আলম ভূঁইয়া",
     position: "Member",
     phone: "01711-155829",
@@ -481,7 +483,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "c5d6e7f8-g9h0-i1j2-k3l4-m5n6o7p8q9r0",
+    id: uuidv4(),
     name: "জনাব মোঃ আব্দুল মালেক",
     position: "Member",
     phone: "01733-073295",
@@ -489,7 +491,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "d6e7f8g9-h0i1-j2k3-l4m5-n6o7p8q9r0s1",
+    id: uuidv4(),
     name: "শেখ ওয়াহিদুজ্জামান (মিকুন)",
     position: "Member",
     phone: "01711-814400",
@@ -497,7 +499,7 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "e7f8g9h0-i1j2-k3l4-m5n6-o7p8q9r0s1t2",
+    id: uuidv4(),
     name: "মোঃ আরিফুল ইসলাম",
     position: "Member",
     phone: "01781-409475",
@@ -505,11 +507,11 @@ export const ALL_COMMITTEE = [
     status: "current",
   },
   {
-    id: "f8g9h0i1-j2k3-l5m6-n7o8-p9q0r1s2t3u4",
+    id: uuidv4(),
     name: "মোঃ মিজানুর রহমান নোভা",
     position: "Member",
     phone: "01920-688190",
     avatar: "/committee/placeholder.jpg",
     status: "current",
-  }
+  },
 ];
