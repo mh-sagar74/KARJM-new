@@ -27,6 +27,7 @@ export const SITE_INFO = {
   mobileName: "KARJM",
   shortName: "KARJM",
   logo: "/logo.png",
+  logoTrans: "/logo-trans.png",
   established: 1980,
   location: "Khulna, Bangladesh",
   address: "Banargati (Mokbul Bazar), Haji Ismail Rd, Sonadanga, Khulna",
@@ -114,4 +115,3 @@ export const WHATSAPP_DATA = {
   ctaText: "Join WhatsApp Group",
   groupLink: "https://chat.whatsapp.com/ET34byvKgZj3UMOUvFJ391",
 };
-

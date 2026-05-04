@@ -43,7 +43,7 @@ export default function Logo() {
   return (
     <Link href="/" style={containerStyle} className="logo-container">
       <Image
-        src={SITE_INFO.logo}
+        src={SITE_INFO.logoTrans}
         alt={`${SITE_INFO.shortName} logo`}
         width={size}
         height={size}
@@ -74,4 +74,3 @@ export default function Logo() {
     </Link>
   );
 }
-

@@ -40,12 +40,13 @@ export default function Navbar() {
   const containerStyle = {
     width: "100%",
     padding: "0 20px",
-    height: "85px",
+    height: isScrolled ? "65px" : "85px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
     minWidth: "0",
     boxSizing: "border-box",
+    transition: "height 0.3s ease",
   };
 
   const navDesktopStyle = {
