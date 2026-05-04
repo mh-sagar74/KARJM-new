@@ -37,7 +37,7 @@ export default function Footer() {
   };
 
   const logoTextStyle = {
-    fontSize: "1.25rem",
+    fontSize: "1.4rem",
     fontWeight: "700",
     color: COLORS.white,
   };
@@ -89,8 +89,8 @@ export default function Footer() {
               <Image
                 src={SITE_INFO.logo}
                 alt="KARJM Logo"
-                width={50}
-                height={50}
+                width={60}
+                height={60}
                 style={{ objectFit: "contain" }}
               />
               <span style={logoTextStyle}>{SITE_INFO.shortName}</span>

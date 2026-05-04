@@ -38,15 +38,14 @@ export default function Navbar() {
   };
 
   const containerStyle = {
-    maxWidth: "1400px",
-    margin: "0 auto",
+    width: "100%",
     padding: "0 20px",
-    height: isScrolled ? "70px" : "85px",
+    height: "85px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    transition: "height 0.3s ease",
     minWidth: "0",
+    boxSizing: "border-box",
   };
 
   const navDesktopStyle = {
@@ -204,8 +203,15 @@ export default function Navbar() {
           .menu-toggle {
             display: flex !important;
           }
+          .navbar-container {
+            padding: 0 16px !important;
+          }
         }
         @media (min-width: 1101px) {
+          .navbar-container {
+            padding-left: 60px !important;
+            padding-right: 60px !important;
+          }
           .desktop-nav {
             gap: 6px !important;
           }

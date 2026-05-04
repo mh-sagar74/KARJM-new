@@ -129,8 +129,8 @@ export default function MobileMenu({ isOpen, onClose }) {
             <Image
               src={SITE_INFO.logo}
               alt={`${SITE_INFO.shortName} logo`}
-              width={40}
-              height={40}
+              width={50}
+              height={50}
               style={{ objectFit: "contain" }}
             />
           </div>
