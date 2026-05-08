@@ -151,7 +151,7 @@ export default function WhatsAppCommunity() {
           <div style={qrBoxStyle}>
             <div style={qrPlaceholderStyle}>
               <Image
-                src="/wp_qr_code.png"
+                src="/general/wp_qr_code.png"
                 alt="WhatsApp QR Code"
                 width={164}
                 height={164}

@@ -5,7 +5,7 @@ export const FOUNDER_DATA = {
   title: "Founder & Land Donor",
   description:
     "May Allah grant him Jannatul Firdaus. His generosity and dedication built this mosque in 1980, serving as a beacon of faith for our community. His legacy continues to inspire us every day.",
-  image: "/mobidul_haque.png",
+  image: "/committee/mobidul_haque.png",
   pray: "Allahummaghfir lahu warhamhu wa a'izhhu wa'fu anhu",
 };
 

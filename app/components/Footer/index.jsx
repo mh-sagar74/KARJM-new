@@ -88,12 +88,12 @@ export default function Footer() {
             <Link href="/" style={logoLinkStyle}>
               <Image
                 src={SITE_INFO.logo}
-                alt="KARJM Logo"
+                alt="Mosque Logo"
                 width={60}
                 height={60}
                 style={{ objectFit: "contain" }}
               />
-              <span style={logoTextStyle}>{SITE_INFO.shortName}</span>
+              <span style={logoTextStyle}>{SITE_INFO.name}</span>
             </Link>
             <p style={descStyle}>
               Serving the community with faith, knowledge, and compassion since 1980.

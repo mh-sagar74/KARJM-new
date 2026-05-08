@@ -2,13 +2,14 @@
 
 import { COLORS } from "../../constants";
 import { FOUNDER_DATA, ALL_COMMITTEE } from "../../constants/committee";
+import { Users, Heart, Sparkles } from "lucide-react";
+import Image from "next/image";
+import CommitteeMemberCard from "@/app/components/CommitteeMemberCard";
 
 const currentCommittee = ALL_COMMITTEE.filter(m => m.status === "current");
 const pastCommittee = ALL_COMMITTEE.filter(m => m.status === "former" || m.status === "deceased");
 const deceasedMembers = pastCommittee.filter(m => m.status === "deceased");
 const formerMembers = pastCommittee.filter(m => m.status === "former");
-import { Users, Heart, Sparkles } from "lucide-react";
-import Image from "next/image";
 
 export default function CommitteePage() {
   const containerStyle = {
@@ -52,7 +53,7 @@ export default function CommitteePage() {
     border: `2px solid ${COLORS.secondary}`,
   };
 
-const founderImageStyle = {
+  const founderImageStyle = {
     width: "150px",
     height: "150px",
     borderRadius: "50%",
@@ -60,16 +61,6 @@ const founderImageStyle = {
     margin: "0 auto 20px",
     border: `4px solid ${COLORS.primary}`,
     backgroundColor: COLORS.white,
-  };
-
-  const avatarStyle = {
-    width: "90px",
-    height: "90px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    margin: "0 auto 14px",
-    border: `3px solid ${COLORS.secondary}`,
-    backgroundColor: COLORS.accent,
   };
 
   const founderNameStyle = {
@@ -113,46 +104,6 @@ const founderImageStyle = {
     margin: "0 auto",
   };
 
-  const cardStyle = {
-    backgroundColor: COLORS.white,
-    borderRadius: "16px",
-    padding: "28px 20px",
-    textAlign: "center",
-    transition: "all 0.3s ease",
-    border: "1px solid rgba(0, 98, 65, 0.1)",
-    boxShadow: "0 4px 20px rgba(0, 98, 65, 0.06)",
-  };
-
-  const nameStyle = {
-    fontSize: "1.15rem",
-    fontWeight: "700",
-    color: COLORS.primary,
-    marginBottom: "4px",
-  };
-
-  const positionStyle = {
-    fontSize: "0.9rem",
-    color: COLORS.secondary,
-    fontWeight: "600",
-    marginBottom: "12px",
-  };
-
-  const phoneStyle = {
-    fontSize: "0.85rem",
-    color: COLORS.text,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "6px",
-  };
-
-  const duaNoteStyle = {
-    fontSize: "0.85rem",
-    color: COLORS.darkGray,
-    fontStyle: "italic",
-    marginTop: "8px",
-  };
-
   const pastCreditStyle = {
     textAlign: "center",
     padding: "20px",
@@ -165,7 +116,6 @@ const founderImageStyle = {
 
   return (
     <div style={containerStyle}>
-      {/* Founder Section */}
       <section style={founderStyle}>
         <Image
           src={FOUNDER_DATA.image}
@@ -195,7 +145,6 @@ const founderImageStyle = {
         </div>
       </section>
 
-      {/* Current Committee */}
       <section style={sectionStyle}>
         <div style={headerStyle}>
           <h2 style={titleStyle}>
@@ -208,34 +157,11 @@ const founderImageStyle = {
         </div>
         <div style={gridStyle}>
           {currentCommittee.map((member) => (
-            <div key={member.id} style={cardStyle} className="committee-card">
-              <Image
-                src={member.avatar}
-                alt={member.name}
-                width={90}
-                height={90}
-                style={avatarStyle}
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
-              />
-              <div style={{ display: 'none', width: '90px', height: '90px', borderRadius: '50%', backgroundColor: COLORS.primary, margin: '0 auto 14px', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: COLORS.white, fontSize: '1.75rem', fontWeight: '700' }}>
-                  {member.name.charAt(0)}
-                </span>
-              </div>
-              <div style={nameStyle}>{member.name}</div>
-              <div style={positionStyle}>{member.position}</div>
-              <a href={`tel:${member.phone.replace(/\s/g, '')}`} style={phoneStyle} className="phone-link">
-                📞 {member.phone}
-              </a>
-            </div>
+            <CommitteeMemberCard key={member.id} member={member} showPhone />
           ))}
         </div>
       </section>
 
-      {/* Past Members - Former (Left but alive) */}
       {formerMembers.length > 0 && (
         <section style={sectionStyle}>
           <div style={headerStyle}>
@@ -249,32 +175,12 @@ const founderImageStyle = {
           </div>
           <div style={gridStyle}>
             {formerMembers.map((member) => (
-              <div key={member.id} style={cardStyle} className="committee-card">
-                <Image
-                  src={member.avatar}
-                  alt={member.name}
-                  width={90}
-                  height={90}
-                  style={avatarStyle}
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div style={{ display: 'none', width: '90px', height: '90px', borderRadius: '50%', backgroundColor: COLORS.secondary, margin: '0 auto 14px', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: COLORS.white, fontSize: '1.75rem', fontWeight: '700' }}>
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-                <div style={nameStyle}>{member.name}</div>
-                <div style={positionStyle}>{member.position}</div>
-              </div>
+              <CommitteeMemberCard key={member.id} member={member} />
             ))}
           </div>
         </section>
       )}
 
-      {/* Past Members - Deceased */}
       {deceasedMembers.length > 0 && (
         <section style={sectionStyle}>
           <div style={headerStyle}>
@@ -286,7 +192,6 @@ const founderImageStyle = {
               Honoring those who passed away - may Allah grant them Jannah
             </p>
           </div>
-
           <div style={pastCreditStyle}>
             <p style={{ color: COLORS.text, fontSize: "0.95rem" }}>
               🌿 <strong>Seek Dua for them</strong> 🌿<br />
@@ -294,40 +199,15 @@ const founderImageStyle = {
               to our mosque community will always be remembered.
             </p>
           </div>
-
           <div style={gridStyle}>
             {deceasedMembers.map((member) => (
-              <div key={member.id} style={cardStyle} className="committee-card">
-                <Image
-                  src={member.avatar}
-                  alt={member.name}
-                  width={90}
-                  height={90}
-                  style={avatarStyle}
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div style={{ display: 'none', width: '90px', height: '90px', borderRadius: '50%', backgroundColor: COLORS.secondary, margin: '0 auto 14px', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: COLORS.white, fontSize: '1.75rem', fontWeight: '700' }}>
-                    {member.name.charAt(0)}
-                  </span>
-                </div>
-                <div style={nameStyle}>{member.name}</div>
-                <div style={positionStyle}>{member.position}</div>
-                <div style={duaNoteStyle}>🤲 Seek Dua for them</div>
-              </div>
+              <CommitteeMemberCard key={member.id} member={member} />
             ))}
           </div>
         </section>
       )}
 
       <style jsx>{`
-        .committee-card:hover {
-          transform: translateY(-8px);
-          box-shadow: 0 12px 32px rgba(0, 98, 65, 0.15) !important;
-        }
         .phone-link:hover {
           color: ${COLORS.secondary} !important;
         }

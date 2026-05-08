@@ -5,6 +5,7 @@ import Image from "next/image";
 import { COLORS } from "../../constants";
 import { FOUNDER_DATA, ALL_COMMITTEE } from "../../constants/committee";
 import Section from "../Section";
+import CommitteeMemberCard from "../CommitteeMemberCard";
 import { ArrowRight, Users } from "lucide-react";
 
 const currentMembers = ALL_COMMITTEE.filter(m => m.status === "current").slice(0, 4);
@@ -43,13 +44,11 @@ export default function CommitteePreview() {
     width: "100px",
     height: "100px",
     borderRadius: "50%",
-    backgroundColor: COLORS.primary,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    marginBottom: "16px",
+    margin: "0 auto 16px",
     overflow: "hidden",
     border: `3px solid ${COLORS.secondary}`,
+    backgroundColor: COLORS.primary,
+    position: "relative",
   };
 
   const founderNameStyle = {
@@ -174,28 +173,7 @@ export default function CommitteePreview() {
 
         <div style={gridStyle}>
           {currentMembers.map((member) => (
-            <div key={member.id} style={cardStyle} className="committee-card">
-              <div style={memberAvatarStyle}>
-                <Image
-                  src={member.avatar}
-                  alt={member.name}
-                  width={70}
-                  height={70}
-                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
-                  }}
-                />
-                <div style={{ display: 'none', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center' }}>
-                  <span style={{ color: COLORS.white, fontSize: "1.25rem", fontWeight: "700" }}>
-                    {getInitials(member.name)}
-                  </span>
-                </div>
-              </div>
-              <div style={memberNameStyle}>{member.name}</div>
-              <div style={memberPositionStyle}>{member.position}</div>
-            </div>
+            <CommitteeMemberCard key={member.id} member={member} />
           ))}
         </div>
       </div>

@@ -146,7 +146,7 @@ export default function About() {
 
         <div style={imageContainerStyle}>
           <Image
-            src="/insideMosque.png"
+            src="/general/insideMosque.png"
             alt="Inside of Khanjahan Ali Jame Masjid"
             fill
             style={{ objectFit: "cover" }}
