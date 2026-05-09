@@ -18,6 +18,7 @@ export default function Services() {
     color: COLORS.primary,
     textAlign: "center",
     marginBottom: "12px",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const subtitleStyle = {

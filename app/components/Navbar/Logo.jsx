@@ -64,6 +64,7 @@ export default function Logo() {
           color: ${COLORS.primary};
           white-space: nowrap;
           transition: color 0.3s ease;
+          font-family: var(--font-amiri), serif;
         }
         @media (max-width: 1023px) {
           .logo-text-full {

@@ -183,6 +183,7 @@ module.exports = {
         code: ['var(--font-source-code-pro)'],
         inter: ['var(--font-inter)'],
         'space-mono': ['var(--font-space-mono)'],
+        amiri: ['var(--font-amiri)', 'serif'],
       },
       fontWeight: {
         extrablack: '950',

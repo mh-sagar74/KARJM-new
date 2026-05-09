@@ -30,6 +30,7 @@ export default function About() {
     display: "flex",
     alignItems: "center",
     gap: "12px",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const descriptionStyle = {

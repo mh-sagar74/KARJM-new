@@ -56,6 +56,7 @@ export default function PrayerTimes() {
     color: COLORS.primary,
     textAlign: "center",
     marginBottom: "8px",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const sectionSubtitleStyle = {

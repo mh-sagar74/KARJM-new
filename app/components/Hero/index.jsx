@@ -61,7 +61,7 @@ export default function Hero() {
 
   const titleStyle = {
     fontSize: "clamp(2rem, 6vw, 4rem)",
-    fontWeight: "800",
+    fontWeight: "700",
     color: COLORS.white,
     marginBottom: "20px",
     opacity: loaded ? 1 : 0,
@@ -69,6 +69,7 @@ export default function Hero() {
     transition: "all 0.8s ease-out",
     textShadow: "0 4px 20px rgba(0,0,0,0.3)",
     letterSpacing: "1px",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const subtitleStyle = {

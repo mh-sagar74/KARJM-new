@@ -49,6 +49,7 @@ export default function WhatsAppCommunity() {
     gap: "12px",
     flexWrap: "nowrap",
     whiteSpace: "nowrap",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const iconWrapperStyle = {

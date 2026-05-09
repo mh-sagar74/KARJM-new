@@ -18,6 +18,7 @@ export default function CommitteePreview() {
     color: COLORS.primary,
     textAlign: "center",
     marginBottom: "12px",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const subtitleStyle = {

@@ -34,6 +34,7 @@ export default function CommitteePage() {
     alignItems: "center",
     justifyContent: "center",
     gap: "12px",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const subtitleStyle = {
@@ -68,6 +69,7 @@ export default function CommitteePage() {
     fontWeight: "800",
     color: COLORS.primary,
     marginBottom: "8px",
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const founderTitleStyle = {

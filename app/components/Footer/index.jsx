@@ -40,6 +40,7 @@ export default function Footer() {
     fontSize: "1.4rem",
     fontWeight: "700",
     color: COLORS.white,
+    fontFamily: "var(--font-amiri), serif",
   };
 
   const descStyle = {
@@ -139,7 +140,7 @@ export default function Footer() {
             <Link 
               href="https://mominulhaquesagar.is-a.dev/" 
               target="_blank"
-              style={{ color: COLORS.secondary, textDecoration: "none" }}
+              style={{ color: COLORS.secondary, textDecoration: "none", fontFamily: "var(--font-amiri), serif", fontWeight: "700" }}
               className="creator-link"
             >
               Mominul Haque

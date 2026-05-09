@@ -188,7 +188,8 @@ export default function MobileMenu({ isOpen, onClose }) {
               color: COLORS.primary, 
               fontSize: "1.1rem", 
               fontWeight: "700",
-              marginTop: "4px" 
+              marginTop: "4px",
+              fontFamily: "var(--font-amiri), serif"
             }}>
               {SITE_INFO.name}
             </div>
